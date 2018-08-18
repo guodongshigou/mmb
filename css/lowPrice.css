@@ -96,6 +96,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.8rem;
 }
 .header .title {
   flex: 1;
@@ -129,18 +130,17 @@ body {
 }
 .main .Topnav .mui-scroll-wrapper a.active {
   color: #e4393c;
-  box-shadow: 0px 0.0266666667rem 0px #ed1c24;
+  box-shadow: 0 0.6666666667rem 0 #ed1c24;
 }
 .main .goodList ul li {
   width: 100%;
   height: 3.92rem;
   padding: 0.1866666667rem 0.2666666667rem 0.2666666667rem;
-  background-color: yellow;
+  background-color: fff;
   margin-top: 0.16rem;
   display: flex;
 }
 .main .goodList ul li .image {
-  background-color: yellowgreen;
   width: 3.4666666667rem;
   height: 3.4666666667rem;
   margin-right: 0.1333333333rem;
@@ -163,28 +163,37 @@ body {
 }
 .main .goodList ul li .info .price {
   color: #fc353a;
-}
-.main .goodList ul li .info .price .newprice {
   font-size: 0.5333333333rem;
-  margin-right: 0.1333333333rem;
 }
-.main .goodList ul li .info .price .oldprice {
+.main .goodList ul li .info .price i {
+  margin-right: 0.08rem;
+  font-size: 0.48rem;
+}
+.main .goodList ul li .info .price em {
+  font-size: 0.32rem;
+}
+.main .goodList ul li .info .price del {
+  font-size: 0.32rem;
   color: #a8a8a8;
+  margin-left: 0.32rem;
 }
-.main .goodList ul li .info .ticket {
+.main .goodList ul li .info .bar {
   display: flex;
 }
-.main .goodList ul li .info .ticket .progress {
+.main .goodList ul li .info .bar i {
   height: 0.32rem;
   background-color: #ffb7b7;
   border: 0.0266666667rem solid #fc353a;
-  margin-right: 0.1333333333rem;
+  margin-right: 0.2666666667rem;
   width: 2.1333333333rem;
   border-radius: 0.16rem;
   color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
-.main .goodList ul li .info .ticket .get {
+.main .goodList ul li .info .bar b {
   color: #fc353a;
 }
 .main .goodList ul li .info .bottom {
@@ -193,13 +202,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.main .goodList ul li .info .bottom .getcoupon {
+.main .goodList ul li .info .bottom a:first-child {
   border: 0.0266666667rem dashed #e4393c;
   color: #e4393c;
   height: 0.64rem;
   padding: 0.1066666667rem;
 }
-.main .goodList ul li .info .bottom .link {
+.main .goodList ul li .info .bottom a:last-child {
   width: 1.5466666667rem;
   height: 0.7466666667rem;
   display: flex;
@@ -208,6 +217,73 @@ body {
   background-color: #ff5e5d;
   color: #fff;
   border-radius: 0.08rem;
+}
+
+.footer {
+  margin-top: 0.8533333333rem;
+  height: 2.5333333333rem;
+  background-color: #efefef;
+  border-top: 0.0266666667rem solid #c4c4c4;
+  display: flex;
+  flex-direction: column;
+}
+.footer .bar {
+  height: 0.9066666667rem;
+  border-bottom: 0.0266666667rem solid #c4c4c4;
+  display: flex;
+}
+.footer .bar a {
+  font-size: 0.3466666667rem;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .bar .login {
+  width: 2.9866666667rem;
+  border-right: 0.0266666667rem solid #c4c4c4;
+}
+.footer .bar .register {
+  width: 2.96rem;
+  border-right: 0.0266666667rem solid #c4c4c4;
+}
+.footer .bar .top {
+  flex: 1;
+}
+.footer .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .content .title {
+  font-size: 0.32rem;
+  color: #666666;
+  margin-bottom: 0.1866666667rem;
+}
+.footer .content .title .app {
+  color: #ff0000;
+}
+.footer .content .web {
+  font-size: 0.2666666667rem;
+  color: #666666;
+}
+.footer .fixed {
+  width: 1.0666666667rem;
+  height: 1.0666666667rem;
+  position: fixed;
+  right: 0.2666666667rem;
+  bottom: 0.8rem;
+  background-color: #808080;
+  border-radius: 0.5333333333rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .fixed i {
+  color: #fff;
+  font-size: 0.5333333333rem;
 }
 
 /*# sourceMappingURL=lowPrice.css.map */
