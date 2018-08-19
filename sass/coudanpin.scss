@@ -1,10 +1,5 @@
 @import "common.scss";
 
-//将px转换为rem
-@function pr($p) {
-    @return $p/37.5 + rem;
-}
-
 //设置样式
 .container {
     
@@ -18,9 +13,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 pr(7) 0 pr(17);
+        padding: 0 pr(7) 0 pr(15);
 
-        // 目前写的都不进行rem转化,最后用插件统一就行
         .left , span {
             color: #fff;
             font-size: 24px;
@@ -118,15 +112,15 @@
         display: flex;
         flex-wrap: wrap;
         .outer {
-            padding: pr(5);
+            padding: pr(3);
             width: 50%;
             .inner {
                 display: flex;
                 flex-direction: column;
                 background-color: #fff;
                 img {
-                    width: pr(170);
-                    height: pr(170);
+                    width: pr(130);
+                    height: pr(130);
                     display: block;
                     margin: 0 auto;
                 }

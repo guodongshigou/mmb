@@ -194,7 +194,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0.1866666667rem 0 0.4533333333rem;
+  padding: 0 0.1866666667rem 0 0.4rem;
 }
 .container .header .left, .container .header span {
   color: #fff;
@@ -285,7 +285,7 @@ body {
   flex-wrap: wrap;
 }
 .container .main .outer {
-  padding: 0.1333333333rem;
+  padding: 0.08rem;
   width: 50%;
 }
 .container .main .outer .inner {
@@ -294,8 +294,8 @@ body {
   background-color: #fff;
 }
 .container .main .outer .inner img {
-  width: 4.5333333333rem;
-  height: 4.5333333333rem;
+  width: 3.4666666667rem;
+  height: 3.4666666667rem;
   display: block;
   margin: 0 auto;
 }

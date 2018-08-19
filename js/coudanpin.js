@@ -1,6 +1,6 @@
 //返回到上一级
 function goback() {
-    history.back();
+    history.back(); 
 }
 
 $(function () {
@@ -12,6 +12,12 @@ $(function () {
             success: function (res) {
                 var htmlstr = template(idName, res);
                 $(selector).html(htmlstr);
+                if (idName == "shoplist") {
+                    $(".storeName").html(res.result[0].shopName);
+                }
+                if (idName == "arealist") {
+                    $(".addrName").html(res.result[0].areaName.substring(0, 2));
+                }
             }
         })
     };
@@ -33,14 +39,16 @@ $(function () {
         });
     }
 
-    //调用方法,初始渲染默认的数据
-    renderPro(data);
-
     //调用方法渲染店铺数据
     render("http://mmb.ittun.com/api/getgsshop", "shoplist", ".list");
 
     //调用方法渲染区域数据
     render("http://mmb.ittun.com/api/getgsshoparea", "arealist", ".areashop");
+
+    //调用方法,初始渲染默认的数据
+    renderPro(data);
+
+
 
     //列表交互效果
     /**
@@ -49,7 +57,7 @@ $(function () {
      * ele2:兄弟列表对象
      * ele4:坐在被点击对象旁边的受害者
      */
-    function animate(ele0,ele1,ele2,ele4) {
+    function animate(ele0, ele1, ele2, ele4) {
         //改变箭头的方向,并且改变下拉表的显示状态
         if ($(ele0).find(".fa").hasClass("fa-caret-down")) {
             //显示下拉表
@@ -70,12 +78,12 @@ $(function () {
 
     //店铺添加点击事件
     $(".business").click(function () {
-        animate(".business",".list",".areashop",".area");
+        animate(".business", ".list", ".areashop", ".area");
     });
 
     // 给区域添加点击事件
     $(".area").click(function () {
-        animate(".area",".areashop",".list",".business");
+        animate(".area", ".areashop", ".list", ".business");
     });
 
     //动态添加点击事件
