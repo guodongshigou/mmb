@@ -101,6 +101,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: pr(30);
     }
     .title {
         flex: 1;
@@ -135,7 +136,7 @@ body {
                 }
                 &.active {
                     color: #e4393c;
-                    box-shadow: 0px pr(1) 0px #ed1c24;
+                    box-shadow: 0 pr(25) 0 #ed1c24;
                 }
             }
         }
@@ -146,11 +147,10 @@ body {
                 width: 100%;
                 height: pr(147);
                 padding: pr(7) pr(10) pr(10);
-                background-color: yellow;
+                background-color: fff;
                 margin-top: pr(6);
                 display: flex;
                 .image {
-                    background-color: yellowgreen;
                     width: pr(130);
                     height: pr(130);
                     margin-right: pr(5);
@@ -172,27 +172,36 @@ body {
                     }
                     .price {
                         color: #fc353a;
-                        .newprice {
-                            font-size: pr(20);
-                            margin-right: pr(5);
+                        font-size: pr(20);
+                        i {
+                            margin-right: pr(3);
+                            font-size: pr(18);
                         }
-                        .oldprice {
+                        em {
+                            font-size: pr(12);
+                        }
+                        del {
+                            font-size: pr(12);
                             color: #a8a8a8;
+                            margin-left: pr(12);
                         }
                     }
-                    .ticket {
+                    .bar {
                         display: flex;
-                        .progress {
+                        i {
                             height: pr(12);
                             background-color: #ffb7b7;
                             border: pr(1) solid #fc353a;
-                            margin-right: pr(5);
+                            margin-right: pr(10);
                             width: pr(80);
                             border-radius: pr(6);
                             color: #fff;
-                            text-align: center;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: bold;
                         }
-                        .get {
+                        b {
                             color: #fc353a;
                         }
                     }
@@ -201,13 +210,13 @@ body {
                         width: 100%;
                         justify-content: space-between;
                         align-items: center;
-                        .getcoupon {
+                        a:first-child {
                             border: pr(1) dashed #e4393c;
                             color: #e4393c;
                             height: pr(24);
                             padding: pr(4);
                         }
-                        .link {
+                        a:last-child {
                             width: pr(58);
                             height: pr(28);
                             display: flex;
@@ -220,6 +229,73 @@ body {
                     }
                 }
             }
+        }
+    }
+}
+
+.footer {
+    margin-top: pr(32);
+    height: pr(95);
+    background-color: #efefef;
+    border-top: pr(1) solid #c4c4c4;
+    display: flex;
+    flex-direction: column;
+    .bar {
+        height: pr(34);
+        border-bottom: pr(1) solid #c4c4c4;
+        display: flex;
+        a {
+            font-size: pr(13);
+            color: #757575;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login {
+            width: pr(112);
+            border-right: pr(1) solid #c4c4c4;
+        }
+        .register {
+            width: pr(111);
+            border-right: pr(1) solid #c4c4c4;
+        }
+        .top {
+            flex: 1;
+        }
+    }
+    .content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .title {
+            font-size: pr(12);
+            color: #666666;
+            margin-bottom: pr(7);
+            .app {
+                color: #ff0000;
+            }
+        }
+        .web {
+            font-size: pr(10);
+            color: #666666;
+        }
+    }
+    .fixed {
+        width: pr(40);
+        height: pr(40);
+        position: fixed;
+        right: pr(10);
+        bottom: pr(30);
+        background-color: #808080;
+        border-radius: pr(20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            color: #fff;
+            font-size: pr(20);
         }
     }
 }
