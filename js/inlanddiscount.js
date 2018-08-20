@@ -15,7 +15,7 @@ $(function () {
 
     $('.main').on('click', '.chanping', function () {
         var id = $(this).data('id');
-        location.href = "xiangqing.html?productId="+id;
+        location.href = "moneyctrl.html?productId="+id;
     })
 
 });
