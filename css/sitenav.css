@@ -1,0 +1,124 @@
+@charset "UTF-8";
+p,
+div,
+span,
+img,
+a,
+input,
+ol,
+ul,
+li,
+i,
+em,
+strong,
+h1,
+h2,
+h3,
+h4,
+body,
+del {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #5c6066;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+input {
+  outline: 0 none;
+  border: 0 none;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+button {
+  outline: 0 none;
+  border: 0 none;
+  background-color: #fff;
+}
+
+body {
+  font: 12px/100% '微软雅黑';
+  background-color: #ffffff;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 1.3333333333rem;
+  background-color: #ff841d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.1866666667rem 0 0.4533333333rem;
+}
+.container .header .back, .container .header span {
+  font-size: 0.6666666667rem;
+  color: #fff;
+}
+.container .header .left img {
+  height: 0.6666666667rem;
+}
+.container .header .right img {
+  height: 0.9333333333rem;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .smail_box {
+  height: 1.3333333333rem;
+  width: 30%;
+  display: flex;
+  background-color: RED;
+  margin: 0.1333333333rem;
+}
+.main .smail_box a {
+  width: 100%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=shop_nav.css.map */

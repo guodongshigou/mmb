@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/shoplist.css">
+    <!-- <link rel="stylesheet" href="css/list.css"> -->
+    <script src="./lib/jquery/jquery3.min.js"></script>
+    <script src="./lib/mui/dist/js/mui.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/shoplist.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        //设置rem
+        document.documentElement.style.fontSize = window.screen.width / 10 + "px";
+    </script>
+
+    <body>
+        <!-- 最外层的大盒子 -->
+        <div class="container">
+            <!-- 头部通用部分 -->
+            <div class="header">
+                <a class="left" href="index.html">
+                    <img src="images/title.png" alt="">
+                </a>
+                <a href="#" class="right">
+                    <img src="images/download.png" alt="">
+                </a>
+            </div>
+
+
+            <!-- 搜索通用部分 -->
+            <div class="searchbar">
+                <div class="inner">
+                    <input type="text" class="search" placeholder="请输入你想比价的商品">
+                    <button class="searchbtn">搜索</button>
+                </div>
+            </div>
+
+
+
+            <!-- 主体部分 -->
+            <div class="main">
+                <div class="big">
+                    <div class="title">
+                        <a href="index.html">首页></a>
+                        <a href="priceCompare.html">全部分类></a>
+                        <a href="#">电视></a>
+                    </div>
+                    <button class="mui-btn mui-btn-success"><a class="btn">筛选</a></button>
+                </div>
+
+
+                <div class="productinfo">
+                    <!-- 渲染数据 -->
+                </div>
+                <!-- 上下页 -->
+                <div class="mui-content-padded">
+                    <ul class="mui-pager">
+                        <li>
+                            <a href="#">
+                                上一页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                下一页
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 底部通用部分 -->
+            <div class="footer">
+                <div class="bar">
+                    <a class="login" href="#">登录</a>
+                    <a class="register" href="#">注册</a>
+                    <a class="top" href="#">
+                        <span class="fa fa-arrow-up"></span>返回顶部</a>
+                </div>
+                <div class="content">
+                    <p class="title">
+                        <span class="app">手机APP下载</span>
+                        <span>慢慢买手机版 -- 掌上比价平台</span>
+                    </p>
+                    <p class="web">m.manmanbuy.com</p>
+                </div>
+            </div>
+
+        </div>
+    </body>
+
+    <!-- 模板渲染 -->
+    <script type="text/html" id="numlist">
+    {{each list v i}}
+    <div class="big_list" data-id ="{{v.id}}">
+            <div class="left">
+                    {{#v.productImg}}
+            </div>
+            <div class="right">
+                <span class="title">{{v.productName}}</span>
+                <p class="price">{{v.productPrice}}</p>
+
+                <p class="baojia">
+                    <p class="offer">{{v.productQuote}}</p>
+                    <p class="comment">{{v.productCom}}</p>
+                </p>
+            </div>
+    </div>
+        {{/each}}
+    </script>
+
+</html>
+<!-- 
+    <div class="smail_list" data-id ="v.id">
+            {{#v.productImg}}
+            <p class="title">{{v.productName}}</p>
+            <p class="prices">
+                <span class="words">价格:</span>
+                <span class="price">{{v.productPrice}}</span>
+            </p>
+            <span class="baojia">
+                <span class="offer">{{v.productQuote}}</span>
+                <span class="comment">{{v.productCom}}</span>
+            </span>
+            <p class="line"></p>
+        </div>
+{{/each}}
+</script>
+
+</html> -->
