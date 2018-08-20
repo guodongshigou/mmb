@@ -1,0 +1,245 @@
+@import "common.scss";
+
+
+.main {
+
+        flex: 1;
+
+        //头部样式
+        .topBar {
+            height: pr(36);
+            border-bottom: pr(1) solid #cccccc;
+            padding: 0 pr(10);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            //导航栏样式
+            .breadcrumb {
+                height: 100%;
+                background-color: #fff;
+                margin-bottom: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                font-size: pr(12);
+    
+                li {
+                    color: #f25500;
+    
+                    &::before {
+                        padding: 0;
+                        padding-left: pr(5);
+                    }
+    
+                    a {
+                        color: #5a5a5a;
+                        text-decoration: none;
+                        font-size: pr(12);
+                    }
+                }
+            }
+    
+            //筛选
+            .showSlide {
+                color: #5a5a5a;
+                text-decoration: none;
+                font-size: pr(12);
+            }
+        }
+    
+        //内容样式
+        .content {
+    
+            //商品详细样式
+            .itemlist {
+                min-height: pr(400);
+                li {
+                    height: pr(140);
+                    padding: pr(9) pr(15);
+                    border-bottom: pr(1) solid #cccccc; 
+                    
+                    a {
+                        height: 100%;
+                        display: flex;
+                        text-decoration: none;
+    
+                        .img {
+                            width: pr(100);
+                            height: 100%;
+                            margin-right: pr(10);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+    
+                            img {
+                                width: pr(100) !important;
+                                height:  pr(100) !important;
+                            }
+                        }
+    
+                        .infor {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+    
+                            .proname {
+                                font-size: pr(14);
+                                line-height: pr(28);
+                                color: #333333;
+                                // margin-bottom: pr(10);
+                            }
+    
+                            .price {
+                                font-size: pr(15);
+                                color: #ed0000;
+                                // margin-bottom: pr(13);
+                            }
+    
+                            .more {
+                                .shop,.comment {
+                                    font-size: pr(12);
+                                    color: #afafaf;
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+    
+            //分页样式
+            .pagelist {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: pr(22);
+                background-color: #f2f2f2;
+    
+                a {
+                    width: pr(84);
+                    height: pr(34);
+                    border-radius: pr(4);
+                    background-color: #eeeeee;
+                    border: pr(1) solid #cccccc;
+                    color: #5a5a5a;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    font-size: pr(12);
+                }
+    
+                .current {
+                    width: pr(94);
+                    height: pr(34);
+                    line-height: pr(34);
+                    font-size: pr(12);
+                    padding: 0;
+                    padding-left: pr(35);
+                    border: 1px solid #cccccc !important;
+                    border-radius: pr(4);
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+    
+                    option.pageSelect {
+                        
+                    }
+                }
+            }
+        }
+}
+    
+//侧栏样式
+#menu {
+        background-color: #fff;
+    
+        //侧栏头部样式
+        .mm-navbar {
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            height: pr(44);
+            padding: 0;
+            box-shadow: 0 pr(1) pr(3) #cccccc;
+            margin-bottom: pr(5);
+    
+            a {
+                font-size: pr(16);
+                color: #000000;
+                margin-left: pr(120);
+            }
+        }
+    
+        //侧栏内容样式
+        .mainPart {
+            
+            li {
+                padding: 0 pr(10);
+            }
+    
+            //内容头部样式
+            .titlePart {
+                display: flex;
+                height: pr(40);
+                align-items: center;
+                justify-content: space-between;
+    
+                .brand {
+                    font-size: pr(14);
+                    color: #000000;
+    
+                    .red {
+                        font-size: pr(12);
+                        color: #ed0000;
+                        margin-left: pr(6);
+                    }
+                }
+    
+                i.fa {
+                    font-size: pr(20);
+                    color: #9fa2b1;
+                }
+    
+    
+                &::after {
+                    border-bottom-width: 0;
+                }
+            }
+    
+            //分类样式
+            .types {
+                display: flex;
+                flex-wrap: wrap;
+    
+                a {
+                    flex: 32%;
+                    
+                    height: pr(34);
+                    padding: pr(3) pr(2);
+                   
+                    span {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: pr(8);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #f2f2f2;
+                        color: #5a5a5a;
+    
+                        &.active {
+                            background-color: #ff5000;
+                            color: #fff;
+                        }
+                    }
+                }
+    
+                &::after {
+                    border-bottom-width: 0;
+                }
+            }
+        }
+}

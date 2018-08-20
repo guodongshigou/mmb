@@ -1,0 +1,71 @@
+@import "./common.scss";
+
+
+.container{
+    >.title{
+        padding: pr(10);
+        background-color: #d5d5d5;
+        span{
+          color: #874604; 
+          font-size: pr(16);
+        }
+    }
+    .nav{
+        padding: pr(14);
+        border-bottom: pr(1) solid #ccc;
+        display: flex;
+        background-color: #fff;
+        position: relative;
+        .left{
+            flex: 2;
+            padding-right:pr(10);
+            img{
+                width: 100%;
+            }
+        }
+        .box{
+            width: pr(15);
+            height: pr(15);
+            background-color: #efeff4;
+            position: absolute;
+            bottom: pr(-8);
+            left: pr(40);
+            transform: rotate(45deg);
+            border-left: pr(1) solid #ccc;
+            border-top: pr(1) solid #ccc;
+        }
+        .right{
+            flex: 5;
+            font-size: pr(16);
+        }
+    }
+    .main{
+        .mui-table-view-cell{
+            &::after{
+                left: 0;
+            }
+        }
+        li{
+            .tit{
+                display: flex;
+                justify-content: space-between;
+                .name{
+                    font-size: pr(14);
+                }
+                .xx{
+                    color: red;
+                    font-size: pr(20);
+                }
+
+                .time{
+                    font-size: pr(14);
+                    color: #aaa;
+                }
+            }
+            .text{
+                font-size: pr(16);
+                color: #000;
+            }
+        }
+    }
+}

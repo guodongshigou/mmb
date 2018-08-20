@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //设置rem
+        document.documentElement.style.fontSize = window.screen.width/10 + "px";
+    </script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <!-- mui插件的css -->
+    <link rel="stylesheet" href="lib/mui/dist/css/mui.min.css">
+    <!-- bootstrap的css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!-- 页面的css -->
+    <link rel="stylesheet" href="css/productDetails.css">
+    <!--jQuery-->
+    <script src="lib/jquery/jquery3.min.js"></script>
+    <!-- mui插件的js -->
+    <script src="lib/mui/dist/js/mui.min.js"></script>
+    <!-- 模板插件的js -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- bootstrap的js -->
+    <!-- <script src="lib/bootstrap/js/bootstrap.min.js"></script> -->
+    <!-- 页面的js -->
+    <script src="js/productDetails.js"></script>
+</head>
+<body>
+    <!-- 最外层的大盒子 -->
+    <div class="container">
+        <!-- 头部通用部分 -->
+        <div class="header">
+            <a class="left" href="index.html"><img src="images/title.png" alt=""></a>
+            <a href="#" class="right"><img src="images/download.png" alt=""></a>
+        </div>
+        <!-- 搜索通用部分 -->
+        <div class="searchbar">
+            <div class="inner">
+                <input type="text" class="search" placeholder="请输入你想比价的商品">
+                <button class="searchbtn">搜索</button>
+            </div>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 头部部分 -->
+            <div class="topBar">
+                <!-- 路径导航 -->
+                <ol class="breadcrumb">
+                   <!-- 模板生成 -->
+                </ol>
+            </div>
+            <!-- 商品列表展示部分 -->
+            <div class="content">
+                <!-- 商品详情 -->
+                <div class="itemlist">
+                    <div class="inner">
+                        <!-- 模板生成 -->
+                    </div>
+                    <a href="#" class="collect">收藏</a>
+                </div>
+               <!-- 比价购买部分 -->
+               <div class="priceBar">
+                   <div class="top">
+                       <li>比价购买</li>
+                       <li>产品参数</li>
+                       <li>优选评论</li>
+                   </div>
+                   <div class="article">
+                        <!-- 模板生成 -->
+                   </div>
+               </div>
+            </div>
+            <!-- 商品评论部分 -->
+            <div class="commentPart">
+                <!-- 头部样式 -->
+                <div class="titlePart">
+                    <div class="inner">优选网友评价</div>
+                </div>
+                <!-- 评论详情 -->
+                <ul class="commentDetails">
+                    <!-- 模板生成 -->
+                </ul>
+                <!-- 评论按钮 -->
+                <div class="button">
+                    <button class="moreComment">查看更多评价</button>
+                </div>
+            </div>
+        </div>
+        <!-- 底部通用部分 -->
+        <div class="footer">
+            <div class="bar">
+                <a class="login" href="#">登录</a>
+                <a class="register" href="#">注册</a>
+                <a class="top" href="#"><span class="fa fa-arrow-up"></span>返回顶部</a>
+            </div>
+            <div class="content">
+                <p class="title">
+                    <span class="app">手机APP下载</span>
+                    <span>慢慢买手机版 -- 掌上比价平台</span>
+                </p>
+                <p class="web">m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 导航模板 -->
+<script id="navlist" type="text/html">
+    <li>
+        <a href="index.html">首页</a>
+    </li>
+    <li>
+        <a href="productList.html" class="category"></a>
+    </li>
+    {{ each result v i }}
+    <li class="active">{{ v.navTitle }}</li>
+    {{ /each }}
+</script>
+<!-- 商品详情的模板 -->
+<script type="text/html" id="itemlist">
+{{ each result v i }}
+    <div class="img">
+        {{@v.productImg}}
+    </div>
+    <p class='proname'>{{ v.productName }}</p>
+{{ /each }}
+</script>
+<!-- 比价购买的模板 -->
+<script id="buyItem" type="text/html">
+{{ each result v i }}
+    <div class="buyInfor">
+        {{@v.bjShop}}
+    </div>
+{{ /each }}
+<p class="note"> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+</script>
+<!-- 评论模板 -->
+<script id="commentList" type="text/html">
+{{ each result v i}}
+    <li class="clearfix">
+        <p class="infor">
+            <span class="buyer mui-pull-left">{{ v.comName }}</span>
+            <span class="time mui-pull-right">{{ v.comTime }}</span>
+        </p>
+        <p class="from">
+            <span class="mui-pull-right">{{ v.comFrom }}</span>
+        </p>
+        <p class="details">{{ v.comContent}}</p>
+        <a class="callback">回复</a>
+    </li>
+{{ /each }}
+</script>
+</html>

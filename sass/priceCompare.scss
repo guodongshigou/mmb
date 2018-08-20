@@ -1,0 +1,65 @@
+@import "common.scss";
+
+.main {
+
+    padding: pr(6) pr(6) pr(26) pr(6);
+
+    .catorylist {
+        border: pr(1) solid #cccccc;
+        border-bottom: 0;
+        box-shadow: 0 pr(2) pr(5) #cccccc;
+        border-radius: pr(10);
+        overflow: hidden;
+
+        .itemlist {
+            background-color: #ebebeb;
+            padding-left: pr(10);
+
+            &::after{
+                left: 0;
+            }
+
+            .mui-navigate-right {
+                line-height: pr(20);
+                font-size: pr(12);
+                color: #000000;
+                font-weight: bold;
+            }
+
+            .mui-collapse-content {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                padding: 0;
+                
+
+                &.hideItem {
+                    height: 0;
+                }
+
+                a {
+                    width: 33.33%;
+                    height: pr(34);
+                    border-right: pr(1) solid #cccccc;
+                    border-bottom: pr(1) solid #cccccc;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: pr(10);
+
+
+                    &:nth-child(3n) {
+                        border-right: 0 none;
+                    }
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
+

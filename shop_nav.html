@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="./lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/shop_nav.css">
+
+        <script src="./lib/jquery/jquery3.min.js"></script>
+        <script src="./lib/mui/dist/js/mui.min.js"></script>
+        <script src="./lib/artTemplate/template-web.js"></script>
+        <script src="./js/shop_nav.js"></script>
+        <script>
+                //设置rem
+                document.documentElement.style.fontSize = window.screen.width / 10 + "px";
+        </script>
+</head>
+
+<body>
+        <!-- 最外层的大盒子 -->
+        <div class="container">
+                <!-- 头部通用部分 -->
+                <div class="header">
+                        <a class="left" href="index.html">
+                                <span class="back">
+                                        < </span>
+                        </a>
+                        <span>商城导航</span>
+                        <a href="#" class="right">
+                                <img src="images/download.png" alt="">
+                        </a>
+                </div>
+                <!-- 主体部分 -->
+                <div class="main">
+                        <!-- <div class="smail_box">
+                                <a href="">
+                                        <img src="./images/title.png" alt="">
+                                        <span>京东购物</span>
+                                </a>
+                        </div>
+                        <div class="smail_box">
+                                <a href="">
+                                        <img src="" alt="">
+                                        <span>京东购物</span>
+                                </a>
+                        </div>
+                        <div class="smail_box">
+                                <a href="">
+                                        <img src="" alt="">
+                                        <span>京东购物</span>
+                                </a>
+                        </div>
+                        <div class="smail_box">
+                                <a href="">
+                                        <img src="" alt="">
+                                        <span>京东购物</span>
+                                </a>
+                        </div> -->
+                </div>
+        </div>
+        
+<script type="text/html" id="navlist">
+        {{each result v i}}
+                <div class="smail_box">
+                        <a href="{{v.navHref}}">
+                                <img src="{{v.navImg}}" alt="">
+                                <span>{{v.navTitle}}</span>
+                        </a>
+                </div>
+        {{/each}}
+</script>
+        
+
+</body>
+
+</html>

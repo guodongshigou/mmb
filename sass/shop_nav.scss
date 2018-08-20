@@ -1,0 +1,19 @@
+@import "my.scss";
+  .main{
+    display: flex;
+    flex-wrap: wrap;
+    .smail_box{
+      height: pr(50);
+      width: 30%;
+      display: flex;
+      background-color: RED;
+      margin: pr(5);
+      a{
+        width: 100%;
+        background-color: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }

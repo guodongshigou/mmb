@@ -1,0 +1,60 @@
+@import "./common.scss";
+
+.main{
+    .title{
+        padding: pr(12);
+        background-color: #ddd;
+        span{
+            font-size: pr(16);
+            color: #874604;
+        }
+    }
+    .nav{
+        .mui-table-view{
+            li{
+                .max{
+                    font-size: pr(16);
+                    color: #000;
+                }
+                .min{
+                    font-size: pr(12);
+                }
+                display: flex;
+                .left{
+                    flex: 2;
+                }
+                .right{
+                    padding-left: pr(10);
+                    flex: 5; 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .red{
+                        color: red;
+                    }
+                    .textRight{
+                        padding-left: pr(5);
+                    }
+                }
+            }
+        }
+    }
+
+    .page{
+        display: flex;
+        justify-content: space-between;
+        padding: pr(15);
+        #select{
+            height: pr(30);
+            margin: 0;
+            width: pr(60);
+            font-size: pr(12);
+            -webkit-appearance:menulist;
+            padding: pr(5) pr(10);
+        }
+        button{
+            height: pr(30);
+            font-size: pr(12);
+        }
+    }
+}

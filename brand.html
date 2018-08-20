@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //设置rem
+        document.documentElement.style.fontSize = window.screen.width / 10 + "px";
+    </script>
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <link rel="stylesheet" href="./lib/mui/dist/css/mui.css">
+    <script src="./lib/jquery/jquery3.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/brand.js"></script>
+</head>
+
+<body>
+    <!-- 最外层的大盒子 -->
+    <div class="container">
+        <!-- 头部通用部分 -->
+        <div class="header">
+            <a class="left" href="index.html">
+                <img src="images/title.png" alt="">
+            </a>
+            <a href="#" class="right">
+                <img src="images/download.png" alt="">
+            </a>
+        </div>
+        <!-- 搜索通用部分 -->
+        <div class="searchbar">
+            <div class="inner">
+                <input type="text" class="search" placeholder="请输入你想比价的商品">
+                <button class="searchbtn">搜索</button>
+            </div>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <div class="nav">
+                <a href="index.html">首页</a>
+                >
+                <a href="brandList.html">品牌大全</a>
+                >
+                <span class="titText"></span>
+            </div>
+            <div class="text titText">
+                
+            </div>
+            <div class="list">
+                <ul class="mui-table-view">
+
+                </ul>
+            </div>
+            <script type="text/html" id="brand">
+                {{each result v i}}
+                    <li class="mui-table-view-cell" data-id="{{v.brandTitleId}}">
+                        <div class="left">
+                            <span class="{{if i==0}}res{{/if}}{{if i==1}}org{{/if}}{{if i==2}}cyan{{/if}}">{{i+1}}</span>
+                        </div>
+                        <div class="right">
+                            <span>{{v.brandName}}</span>
+                            <span class="num">{{v.brandInfo}}</span>
+                        </div>
+                    </li>
+                {{/each}}
+            </script>
+
+
+            <!-- 十大品牌列表 -->
+            <div class="list">
+
+            </div>
+
+
+
+
+        </div>
+        <!-- 底部通用部分 -->
+        <div class="footer">
+            <div class="bar">
+                <a class="login" href="#">登录</a>
+                <a class="register" href="#">注册</a>
+                <a class="top" href="#">
+                    <span class="fa fa-arrow-up"></span>返回顶部</a>
+            </div>
+            <div class="content">
+                <p class="title">
+                    <span class="app">手机APP下载</span>
+                    <span>慢慢买手机版 -- 掌上比价平台</span>
+                </p>
+                <p class="web">m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

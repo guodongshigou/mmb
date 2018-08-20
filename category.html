@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //设置rem
+        document.documentElement.style.fontSize = window.screen.width/10 + "px";
+    </script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <!-- mui插件的css -->
+    <link rel="stylesheet" href="lib/mui/dist/css/mui.min.css">
+    <!-- 页面的css -->
+    <link rel="stylesheet" href="css/priceCompare.css">
+    <!--jQuery-->
+    <script src="lib/jquery/jquery3.min.js"></script>
+    <!-- mui插件的js -->
+    <script src="lib/mui/dist/js/mui.min.js"></script>
+    <!-- 模板插件的js -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 页面的js -->
+    <script src="js/priceCompare.js"></script>
+</head>
+<body>
+    <!-- 最外层的大盒子 -->
+    <div class="container">
+        <!-- 头部通用部分 -->
+        <div class="header">
+            <a class="left" href="index.html"><img src="images/title.png" alt=""></a>
+            <a href="#" class="right"><img src="images/download.png" alt=""></a>
+        </div>
+        <!-- 搜索通用部分 -->
+        <div class="searchbar">
+            <div class="inner">
+                <input type="text" class="search" placeholder="请输入你想比价的商品">
+                <button class="searchbtn">搜索</button>
+            </div>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <ul class="mui-table-view catorylist"> 
+                
+            </ul>
+        </div>
+        <!-- 底部通用部分 -->
+        <div class="footer">
+            <div class="bar">
+                <a class="login" href="#">登录</a>
+                <a class="register" href="#">注册</a>
+                <a class="top" href="#"><span class="fa fa-arrow-up"></span>返回顶部</a>
+            </div>
+            <div class="content">
+                <p class="title">
+                    <span class="app">手机APP下载</span>
+                    <span>慢慢买手机版 -- 掌上比价平台</span>
+                </p>
+                <p class="web">m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 一级分类模板 -->
+<script id="category" type="text/html">
+{{ each result v }}
+<li class="itemlist mui-table-view-cell mui-collapse">
+    <a class="mui-navigate-right" title="{{ v.titleId }}">{{ v.title }}</a>
+    <div class="mui-collapse-content hideItem">
+    </div>
+</li>
+{{ /each }}
+</script>
+<!-- 二级分类模板 -->
+<script id="subcategory" type="text/html">
+    {{ each result v i }}
+        <a class="categoryId" data-id="{{ v.categoryId }}">{{ v.category }}</a>
+    {{ /each }}
+</script>
+</html>

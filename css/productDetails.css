@@ -1,0 +1,416 @@
+@charset "UTF-8";
+p,
+div,
+span,
+img,
+a,
+input,
+ol,
+ul,
+li,
+i,
+em,
+strong,
+h1,
+h2,
+h3,
+h4,
+body,
+del {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #5c6066;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+input {
+  outline: 0 none;
+  border: 0 none;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+button {
+  outline: 0 none;
+  border: 0 none;
+  background-color: #fff;
+}
+
+body {
+  font: 12px/100% '微软雅黑';
+  background-color: #ffffff;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 1.3333333333rem;
+  background-color: #ff841d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.1866666667rem 0 0.4533333333rem;
+}
+.container .header .left img {
+  height: 0.6666666667rem;
+}
+.container .header .right img {
+  height: 0.9333333333rem;
+}
+.container .searchbar {
+  height: 1.36rem;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .searchbar .inner {
+  width: 9.4666666667rem;
+  height: 0.8rem;
+  position: relative;
+}
+.container .searchbar .inner .search {
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  border-radius: 0.4rem;
+  padding-left: 0.48rem;
+}
+.container .searchbar .inner .search::placeholder {
+  color: #929292;
+  font-size: 0.3733333333rem;
+}
+.container .searchbar .inner .searchbtn {
+  width: 1.68rem;
+  height: 100%;
+  border-radius: 0.4rem;
+  background-color: #ff841d;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.3733333333rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main {
+  flex: 1;
+  min-height: 13.3333333333rem;
+}
+.container .footer {
+  height: 2.5333333333rem;
+  background-color: #efefef;
+  border-top: 1px solid #c4c4c4;
+  display: flex;
+  flex-direction: column;
+}
+.container .footer .bar {
+  height: 0.9066666667rem;
+  border-bottom: 1px solid #c4c4c4;
+  display: flex;
+}
+.container .footer .bar a {
+  font-size: 0.3466666667rem;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .footer .bar .login {
+  width: 2.9866666667rem;
+  border-right: 1px solid #c4c4c4;
+}
+.container .footer .bar .register {
+  width: 2.96rem;
+  border-right: 1px solid #c4c4c4;
+}
+.container .footer .bar .top {
+  flex: 1;
+}
+.container .footer .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .footer .content .title {
+  font-size: 0.32rem;
+  color: #666666;
+  margin-bottom: 0.1866666667rem;
+}
+.container .footer .content .title .app {
+  color: #ff0000;
+}
+.container .footer .content .web {
+  font-size: 0.2666666667rem;
+  color: #666666;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .main {
+  flex: 1;
+}
+.container .main .topBar {
+  height: 0.96rem;
+  border-bottom: 0.0266666667rem solid #cccccc;
+  padding: 0 0.2666666667rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+}
+.container .main .topBar .breadcrumb {
+  height: 100%;
+  background-color: #f6f6f6;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  font-size: 0.2666666667rem;
+}
+.container .main .topBar .breadcrumb li {
+  color: #f25500;
+}
+.container .main .topBar .breadcrumb li::before {
+  padding: 0;
+  padding-left: 0.1333333333rem;
+}
+.container .main .topBar .breadcrumb li a {
+  color: #5a5a5a;
+  text-decoration: none;
+  font-size: 0.2666666667rem;
+}
+.container .main .content .itemlist {
+  height: 8.1066666667rem;
+  padding-bottom: 0.5333333333rem;
+  background-color: #f2f2f2;
+  position: relative;
+}
+.container .main .content .itemlist .inner {
+  height: 7.6533333333rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.6666666667rem 0.6666666667rem 0.6666666667rem 0.2666666667rem;
+}
+.container .main .content .itemlist .inner img {
+  width: 4.2666666667rem !important;
+}
+.container .main .content .itemlist .inner .proname {
+  font-size: 0.4rem;
+  line-height: 0.5866666667rem;
+  color: #000000;
+}
+.container .main .content .itemlist .collect {
+  position: absolute;
+  width: 1.0666666667rem;
+  height: 1.0666666667rem;
+  border-radius: 0.5333333333rem;
+  background-color: #95d800;
+  right: 0.4266666667rem;
+  top: 0.4266666667rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.0666666667rem;
+  font-size: 0.32rem;
+}
+.container .main .content .priceBar {
+  background-color: #f2f2f2;
+  padding-bottom: 0.1333333333rem;
+}
+.container .main .content .priceBar .top {
+  height: 0.9333333333rem;
+  background-color: #ffc831;
+  display: flex;
+  align-items: center;
+  border-top: 0.0266666667rem solid #c14d00;
+  border-bottom: 0.0266666667rem solid #c14d00;
+}
+.container .main .content .priceBar .top li {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.3733333333rem;
+  color: #fff;
+  border-right: 0.0266666667rem solid #c14d00;
+}
+.container .main .content .priceBar .top li:last-child {
+  border-right: none;
+}
+.container .main .content .priceBar .buyInfor {
+  background-color: #fff;
+  height: 1.2533333333rem;
+  border-bottom: 0.0266666667rem solid #cccccc;
+}
+.container .main .content .priceBar .buyInfor table {
+  height: 100%;
+}
+.container .main .content .priceBar .buyInfor table tr {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .main .content .priceBar .buyInfor table tr .p_pic {
+  height: 100%;
+  vertical-align: middle !important;
+  padding-left: 0.1866666667rem;
+  padding-top: 0.08rem;
+  display: flex;
+  align-items: center;
+}
+.container .main .content .priceBar .buyInfor table tr .p_pic img {
+  width: 0.4266666667rem;
+}
+.container .main .content .priceBar .buyInfor table tr td:nth-child(2) {
+  font-size: 0.4266666667rem;
+  color: #5a5a5a;
+  margin-left: -2.6666666667rem;
+  display: flex;
+  align-items: center;
+}
+.container .main .content .priceBar .buyInfor table tr td:nth-child(2) a {
+  text-decoration: none;
+}
+.container .main .content .priceBar .buyInfor table tr .red {
+  font-size: 0.4266666667rem;
+  color: #f25500;
+  margin-right: -2.4rem;
+}
+.container .main .content .priceBar .buyInfor table tr .red font {
+  display: flex;
+  align-items: center;
+}
+.container .main .content .priceBar .buyInfor table tr td:nth-child(4) {
+  padding-right: 0.1866666667rem;
+  height: 0.6666666667rem;
+  width: 1.8666666667rem;
+}
+.container .main .content .priceBar .buyInfor table tr td:nth-child(4) span {
+  height: 100%  !important;
+  width: 100%  !important;
+  line-height: 0.6666666667rem !important;
+  font-size: 0.32rem !important;
+}
+.container .main .content .priceBar .note {
+  height: 1.6rem;
+  padding: 0.2666666667rem 0.5333333333rem 0.2666666667rem 0.2666666667rem;
+  background-color: #fff;
+  font-size: 0.3466666667rem;
+  line-height: 0.48rem;
+  color: #888888;
+}
+.container .main .commentPart .titlePart {
+  background-color: #fff;
+  padding-top: 0.0533333333rem;
+  border-top: 0.1066666667rem solid #7a7a7a;
+  box-shadow: 0 0.0533333333rem 0.1333333333rem #cccccc;
+}
+.container .main .commentPart .titlePart .inner {
+  background-color: #dbdbdb;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  font-size: 0.4rem;
+  text-align: center;
+}
+.container .main .commentPart .commentDetails li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.2666666667rem 0.2666666667rem 0.1333333333rem 0.2666666667rem;
+  border-bottom: 0.0266666667rem solid #cccccc;
+}
+.container .main .commentPart .commentDetails li .infor {
+  margin-bottom: 0.2666666667rem;
+}
+.container .main .commentPart .commentDetails li .infor .buyer {
+  font-size: 0.3733333333rem;
+  color: #b3b3b3;
+}
+.container .main .commentPart .commentDetails li .infor .time {
+  font-size: 0.32rem;
+  color: #666666;
+}
+.container .main .commentPart .commentDetails li .from {
+  font-size: 0.32rem;
+  color: #666666;
+  margin-bottom: 0.2133333333rem;
+}
+.container .main .commentPart .commentDetails li .details {
+  font-size: 0.3733333333rem;
+  color: #000000;
+  line-height: 0.6133333333rem;
+  margin-bottom: 0.2133333333rem;
+}
+.container .main .commentPart .commentDetails li .callback {
+  font-size: 0.32rem;
+  color: #b3b3b3;
+  margin-bottom: 0.1066666667rem;
+}
+.container .main .commentPart .button {
+  height: 1.8666666667rem;
+  background-color: #f2f2f2;
+  padding: 0 0.2133333333rem;
+  display: flex;
+  align-items: center;
+}
+.container .main .commentPart .button .moreComment {
+  height: 0.88rem;
+  width: 100%;
+  background-color: #e7e7e7;
+  border: 0.0266666667rem solid #dbdbdb;
+  box-shadow: 0 0.0266666667rem 0.1333333333rem #cccccc;
+  font-size: 0.3733333333rem;
+  color: #787878;
+}
+
+/*# sourceMappingURL=productDetails.css.map */
