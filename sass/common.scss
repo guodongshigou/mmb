@@ -1,0 +1,232 @@
+//初始化代码
+p,
+div,
+span,
+img,
+a,
+input,
+ol,
+ul,
+li,
+i,
+em,
+strong,
+h1,
+h2,
+h3,
+h4,
+body,
+del {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #5c6066;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+
+input {
+    outline: 0 none;
+    border: 0 none;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+}
+
+button {
+    outline: 0 none;
+    border: 0 none;
+    background-color: #fff;
+}
+
+body {
+    font: 12px/100% '微软雅黑';
+    background-color: #ffffff;
+}
+
+// html,
+// body {
+//     height: 100%;
+// }
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+//将px转换为rem
+@function pr($p) {
+    @return $p/37.5 + rem;
+}
+
+//设置样式
+.container {
+    
+    // height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    //设置头部通用样式
+    .header {
+        height: pr(50);
+        background-color: #ff841d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 pr(7) 0 pr(17);
+
+        .left {
+            img {
+                height: pr(25);
+            }
+        }
+
+        .right {
+            img {
+                height: pr(35);
+            }
+        }
+    }
+
+    //设置搜索通用样式
+    .searchbar {
+        height: pr(51);
+        // width: pr(710);
+        border-bottom: 1px solid #e6e6e6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .inner {
+            width: pr(355);
+            height: pr(30);
+            position: relative;
+            
+            .search {
+                width: 100%;
+                height: 100%;
+                background-color: #f1f1f1;
+                border-radius: pr(15);
+                padding-left: pr(18);
+
+                &::placeholder {
+                    color: #929292;
+                    font-size: pr(14);
+                }
+            }
+    
+            .searchbtn {
+                width: pr(63);
+                height: 100%;
+                border-radius: pr(15);
+                background-color: #ff841d;
+                color: #fff;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: pr(14);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    //设置主体部分
+    .main {
+        flex: 1;
+        min-height: pr(500);
+    }
+
+    //设置底部通用样式
+    .footer {
+        height: pr(95);
+        background-color: #efefef;
+        border-top: 1px solid #c4c4c4;
+        display: flex;
+        flex-direction: column;
+
+        .bar {
+            height: pr(34);
+            border-bottom: 1px solid #c4c4c4;
+            display: flex;
+
+            a {
+                font-size: pr(13);
+                color: #757575;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+               
+            }
+
+            .login {
+                width: pr(112);
+                border-right: 1px solid #c4c4c4;
+            }
+
+            .register {
+                width: pr(111);
+                border-right: 1px solid #c4c4c4;
+            }
+
+            .top {
+                flex: 1;
+            }
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .title {
+                font-size: pr(12);
+                color: #666666;
+                margin-bottom: pr(7);
+
+                .app {
+                    color: #ff0000;
+                }
+            }
+
+            .web {
+                font-size: pr(10);
+                color: #666666;
+            }
+        }
+    }
+}

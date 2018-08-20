@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //设置rem
+        document.documentElement.style.fontSize = window.screen.width / 10 + "px";
+    </script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <!-- mui插件的css -->
+    <link rel="stylesheet" href="lib/mui/dist/css/mui.min.css">
+    <!-- bootstrap的css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!-- 侧栏的css -->
+    <link rel="stylesheet" href="lib/mmenu/jquery.mmenu.all.css">
+    <!-- 页面的css -->
+    <link rel="stylesheet" href="css/productList.css">
+    <!--jQuery-->
+    <script src="lib/jquery/jquery3.min.js"></script>
+    <!-- mui插件的js -->
+    <script src="lib/mui/dist/js/mui.min.js"></script>
+    <!-- 模板插件的js -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 侧栏的js -->
+    <script src="lib/mmenu/jquery.mmenu.all.js"></script>
+    <!-- 页面的js -->
+    <script src="js/productList.js"></script>
+</head>
+
+<body>
+    <!-- 显示的内容 -->
+    <div class="page">
+        <div class="content">
+            <!-- 最外层的大盒子 -->
+            <div class="container">
+                <!-- 头部通用部分 -->
+                <div class="header">
+                    <a class="left" href="index.html">
+                        <img src="images/title.png" alt="">
+                    </a>
+                    <a href="#" class="right">
+                        <img src="images/download.png" alt="">
+                    </a>
+                </div>
+                <!-- 搜索通用部分 -->
+                <div class="searchbar">
+                    <div class="inner">
+                        <input type="text" class="search" placeholder="请输入你想比价的商品">
+                        <button class="searchbtn">搜索</button>
+                    </div>
+                </div>
+                <!-- 主体部分 -->
+                <div class="main">
+                    <!-- 头部部分 -->
+                    <div class="topBar">
+                        <!-- 路径导航 -->
+                        <ol class="breadcrumb">
+                            <!-- 模板生成 -->
+                        </ol>
+                        <!-- 筛选 -->
+                        <a class="showSlide" href="#menu">
+                            <i class="fa fa-filter" aria-hidden="true"></i>筛选
+                        </a>
+                    </div>
+                    <!-- 商品列表展示部分 -->
+                    <div class="content">
+                        <!-- 商品详情 -->
+                        <ul class="itemlist">
+                            <!-- 内容动态生成 -->
+                        </ul>
+                        <!-- 分页部分 -->
+                        <ul class="pagelist">
+                            <li class="previous">
+                                <a>上一页</a>
+                            </li>
+                            <select class="current">
+                                <!-- 模板动态生成 -->
+                            </select>
+                            <li class="next">
+                                <a>下一页</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 底部通用部分 -->
+                <div class="footer">
+                    <div class="bar">
+                        <a class="login" href="#">登录</a>
+                        <a class="register" href="#">注册</a>
+                        <a class="top" href="#">
+                            <span class="fa fa-arrow-up"></span>返回顶部</a>
+                    </div>
+                    <div class="content">
+                        <p class="title">
+                            <span class="app">手机APP下载</span>
+                            <span>慢慢买手机版 -- 掌上比价平台</span>
+                        </p>
+                        <p class="web">m.manmanbuy.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--侧栏 -->
+    <nav id="menu">
+        <ul class="mainPart">
+            <li class="titlePart">
+                <p class="brand">
+                    <span>品牌</span>
+                    <span class="red">全部品牌</span>
+                </p>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </li>
+            <li class="types brandName">
+               <!-- 模板生成 -->
+            </li>
+            <li class="titlePart">
+                <p class="brand">
+                    <span>价格</span>
+                    <span class="red">全部价格</span>
+                </p>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </li>
+            <li class="types">
+                <a>
+                    <span class="active">全部价格</span>
+                </a>
+                <a>
+                    <span>1-1499</span>
+                </a>
+                <a>
+                    <span>1500-2999</span>
+                </a>
+                <a>
+                    <span>3000-4499</span>
+                </a>
+                <a>
+                    <span>4500-5999</span>
+                </a>
+                <a>
+                    <span>6000-7999</span>
+                </a>
+            </li>
+            <li class="titlePart">
+                <p class="brand">
+                    <span>评分</span>
+                    <span class="red">全部评分</span>
+                </p>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </li>
+            <li class="types">
+                <a>
+                    <span class="active">全部评分</span>
+                </a>
+                <a>
+                    <span>4.8及以上</span>
+                </a>
+                <a>
+                    <span>4.6及以上</span>
+                </a>
+                <a>
+                    <span>4.4及以上</span>
+                </a>
+                <a>
+                    <span>4.2及以上</span>
+                </a>
+                <a>
+                    <span>4.0及以上</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+<!-- 导航模板 -->
+<script id="navlist" type="text/html">
+    <li>
+        <a href="index.html">首页</a>
+    </li>
+    <li>
+        <a href="priceCompare.html">全部分类</a>
+    </li>
+    {{ each result v i }}
+    <li class="active">{{ v.category }}</li>
+    {{ /each }}
+</script>
+<!-- 商品详情的模板 -->
+<script type="text/html" id="itemlist">
+    {{ each result v i }}
+    <li data-id="{{ v.productId }}" class="item">
+        <a href="javascript:;">
+            <div class="img">
+                {{@v.productImg}}
+            </div>
+            <div class="infor">
+                <p class='proname mui-ellipsis-2'>{{ v.productName }}</p>
+                <p class="price">{{ v.productPrice }}</p>
+                <div class="more">
+                    <p class="shop mui-pull-left">{{ v.productQuote }}</p>
+                    <p class="comment mui-pull-right">{{ v.productCom }}</p>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+<!-- 分页下拉框的模板 -->
+<script id="pagenum" type="text/html">
+    <% for ( var i = 0 ; i < totalpage; i++ ) { %>
+        <option class="pageSelect" value="{{ i+1 }}">{{i+1}}/{{totalpage}}</option>
+        <% } %>
+</script>
+
+<!-- 侧栏的品牌模板 -->
+<script id="brandName" type="text/html">
+    <a>
+        <span class="active">全部品牌</span>
+    </a>
+    <% for( i = 0; i < list.length; i++){ %>
+        <a>
+            <span>{{ list[i] }}</span>
+        </a>
+    <% } %>
+</script>
+</html>
