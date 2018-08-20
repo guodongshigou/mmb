@@ -158,3 +158,44 @@
     }
 
 }
+$width : 30px;
+//悬浮窗口的样式
+.menu {
+    width: $width;
+    height: 140px;
+    // background-color: rgba(0,0,0,.7);
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 30px;
+    .top {
+        height: 90px;
+        >i {
+            width: $width;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: rgba(0,0,0,.7);
+            position: absolute;
+            bottom: 0;
+            border-radius: 50%;
+            margin-top: 5px;
+            z-index: -1;
+        }
+    }
+    .bottom {
+        width: $width;
+        height: $width;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+}

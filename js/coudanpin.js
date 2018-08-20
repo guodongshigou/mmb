@@ -116,4 +116,9 @@ $(function () {
         renderPro(data);
     });
 
+    //悬浮事件
+    $(".bottom").click(function(){
+        $(".top")
+    });
+
 });
