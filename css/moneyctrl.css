@@ -262,6 +262,9 @@ body {
 .main .weixin img {
   width: 100%;
 }
+.main .form {
+  margin-top: 0.1333333333rem;
+}
 .main .pinlun {
   padding: 0.2666666667rem;
   width: 100%;
@@ -285,18 +288,23 @@ body {
   color: #fff;
   align-self: flex-end;
 }
+.main .pinlun #newcomment {
+  margin-top: 0.2666666667rem;
+}
 .main .pinlun .fabu p {
   color: #0f0f0f;
   padding-top: 0.2666666667rem;
   font-size: 0.4266666667rem;
 }
 .main .pinlun .fabu .zhiliao {
+  width: 100%;
   display: flex;
 }
 .main .pinlun .fabu .zhiliao .a {
+  width: 100%;
   display: flex;
-  width: 50%;
   border-radius: 50%;
+  justify-content: space-between;
 }
 .main .pinlun .fabu .zhiliao .a .aa {
   width: 50%;
@@ -305,11 +313,10 @@ body {
   color: #2d76d6;
 }
 .main .pinlun .fabu .zhiliao .a .tupian {
-  width: 50%;
   padding: 0.2666666667rem;
 }
 .main .pinlun .fabu .zhiliao .a .tupian img {
-  width: 100%;
+  width: 1.3333333333rem;
 }
 .main .pinlun .fabu .zhiliao .b {
   width: 50%;
@@ -320,6 +327,9 @@ body {
   font-size: 0.4266666667rem;
   color: #6e6d6d;
   padding-right: 0.2666666667rem;
+}
+.main .pinlun .yonhu {
+  margin: 0;
 }
 
 /*# sourceMappingURL=moneyctrl.css.map */
