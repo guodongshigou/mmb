@@ -27,7 +27,7 @@ $(function(){
             $(".nav a:nth-child(n+9)").removeClass("activeout");
             $(".nav a:nth-child(n+9)").addClass("active")
         }
-        return flase;
+        return false;
     })
 
 

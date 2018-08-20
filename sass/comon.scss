@@ -1,0 +1,160 @@
+//将PX转换成rem
+
+@function pr($p){
+    @return $p / 37.5 +rem;
+};
+
+//初始化代码
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+
+    .header{
+        width: 100%;
+        height: pr(100);
+        color: #ffeef0;
+        background-color: #ff841d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main {
+        ul {
+            li {
+                // display: flex;
+                // padding-top: pr(-50);
+                // height: pr(200);
+                // margin-bottom: pr(15);
+                a{
+                    display: flex;
+                    padding-top: pr(-50);
+                    height: pr(200);
+                    margin-bottom: pr(15);
+                    color:block;
+                      .left{
+                    width: pr(200); 
+                     height: pr(200);
+
+                    img{
+                        width: pr(200); 
+                        height: pr(200);
+                }
+                }
+                .right {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding-right:10px;
+                    
+                    .slgan {
+                        padding: pr(10) pr(40) pr(0) pr(10);
+                        font-size: pr(40);
+                        span {
+                            color:orange;
+                        }
+                    }
+                  
+                    .hint {
+                        // display: flex;
+                        margin-left: pr(15);
+                        font-size: pr(12);
+                        color:#999;
+                        padding-bottom: pr(10);
+
+                        .info{
+                            font-size: pr(30);
+                        }
+                        
+                        .informetion {
+                            float: right;
+                            font-size: pr(35);
+                            padding-right: pr(5);
+                        }
+
+                    }
+
+              
+                }
+                }
+              
+            }
+        }
+    }
+
+    .mmb_page {
+        display: flex;
+    }
+
+
+    .footer {
+        width: 100%;
+        background-color: #fff;
+        
+
+        .foot_top {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #ccc;
+            align-items: center;
+
+            a{
+                width: 33.3333%;
+                height: pr(80);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: black;
+            }
+            a:nth-child(2) {
+                border-right: 1px solid #ccc;
+                border-left: 1px solid #ccc;
+            }
+
+            .back{
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        
+        .foot_bottom {
+            text-align: center;
+            padding-top: pr(15);
+
+            a:nth-child(1){
+                color: red;
+            }
+            a:nth-child(2){
+                color: black;
+            }
+        }
+        
+    }
+}
