@@ -189,44 +189,64 @@ body {
   color: #666666;
 }
 
-.header {
-  background-color: #ff841d;
+.container > .title {
+  padding: 0.2666666667rem;
+  background-color: #d5d5d5;
 }
-
-.container .main {
+.container > .title span {
+  color: #874604;
+  font-size: 0.4266666667rem;
+}
+.container .nav {
+  padding: 0.3733333333rem;
+  border-bottom: 0.0266666667rem solid #ccc;
   display: flex;
-  flex-wrap: wrap;
+  background-color: #fff;
+  position: relative;
 }
-.container .main .chanping {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 7.0666666667rem;
-  padding: 0rem 0.2666666667rem;
-  justify-content: space-around;
-  border-bottom: 1px solid #ccc;
+.container .nav .left {
+  flex: 2;
+  padding-right: 0.2666666667rem;
 }
-.container .main .chanping:nth-child(2n-1) {
-  border-right: 1px solid #ccc;
-}
-.container .main .chanping img {
+.container .nav .left img {
   width: 100%;
 }
-.container .main .chanping .a {
-  line-height: 0.5333333333rem;
+.container .nav .box {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #efeff4;
+  position: absolute;
+  bottom: -0.2133333333rem;
+  left: 1.0666666667rem;
+  transform: rotate(45deg);
+  border-left: 0.0266666667rem solid #ccc;
+  border-top: 0.0266666667rem solid #ccc;
+}
+.container .nav .right {
+  flex: 5;
+  font-size: 0.4266666667rem;
+}
+.container .main .mui-table-view-cell::after {
+  left: 0;
+}
+.container .main li .tit {
+  display: flex;
+  justify-content: space-between;
+}
+.container .main li .tit .name {
   font-size: 0.3733333333rem;
-  color: #333333;
 }
-.container .main .chanping .b {
+.container .main li .tit .xx {
+  color: red;
+  font-size: 0.5333333333rem;
+}
+.container .main li .tit .time {
   font-size: 0.3733333333rem;
-  color: orange;
+  color: #aaa;
 }
-.container .main .chanping .c {
-  padding-bottom: 10px;
-}
-.container .main .chanping .c span {
-  font-size: 0.32rem;
-  color: #ccc;
+.container .main li .text {
+  font-size: 0.4266666667rem;
+  color: #000;
 }
 
-/*# sourceMappingURL=zhekou.css.map */
+/*# sourceMappingURL=details.css.map */

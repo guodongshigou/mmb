@@ -80,6 +80,7 @@ body {
 }
 
 .container {
+  padding: 0;
   display: flex;
   flex-direction: column;
 }
@@ -116,9 +117,9 @@ body {
   border-radius: 0.4rem;
   padding-left: 0.48rem;
 }
-.container .searchbar .inner .search ::placeholder {
+.container .searchbar .inner .search::placeholder {
   color: #929292;
-  font-size: 0.4266666667rem;
+  font-size: 0.3733333333rem;
 }
 .container .searchbar .inner .searchbtn {
   width: 1.68rem;
@@ -129,10 +130,14 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 0.4266666667rem;
+  font-size: 0.3733333333rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container .main {
   flex: 1;
+  min-height: 13.3333333333rem;
 }
 .container .footer {
   height: 2.5333333333rem;
