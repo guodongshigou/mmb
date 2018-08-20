@@ -1,0 +1,160 @@
+@import "common.scss";
+
+//设置样式
+.container {
+    
+    display: flex;
+    flex-direction: column;
+
+    //设置头部通用样式
+    .header {
+        height: pr(50);
+        background-color: #ff841d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 pr(7) 0 pr(15);
+
+        .left , span {
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .right {
+            img {
+                height: pr(35);
+            }
+        }
+    }
+
+    //设置bar的样式
+    .content {
+        position: relative;
+        .bar {
+            background-color: #fff;
+            height: pr(40);
+            display: flex;
+            align-items: center;
+            border-bottom: pr(1) solid #ddd;
+            font-size: pr(16);
+            .searchkey {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                span {
+                    margin-right: pr(6);
+                }
+            }
+            .searchbox {
+                flex-basis: pr(50);
+                border-left: pr(1) solid #ddd;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ccc;
+            }
+        }
+        .list {
+            width: 100%;
+            position: absolute;
+            top: pr(40);
+            left: 0;
+            display: none;
+            z-index: 4;
+            background-color: #fff;
+            li {
+                line-height: pr(40);
+                padding: pr(4) pr(10);
+                font-size: pr(18);
+                border-bottom: pr(1) solid #ddd;
+                .fa-check {
+                    color: #ff841d;
+                    float: right;
+                    margin-top: pr(8);
+                    margin-right: pr(10);
+                    font-size: pr(22);
+                }
+            }
+        }
+        .areashop {
+            width: 100%;
+            position: absolute;
+            top: pr(40);
+            left: 0;
+            display: none;
+            z-index: 4;
+            background-color: #fff;
+            li {
+                line-height: pr(40);
+                padding: pr(4) pr(10);
+                font-size: pr(18);
+                border-bottom: pr(1) solid #ddd;
+                .fa-check {
+                    color: #ff841d;
+                    float: right;
+                    margin-top: pr(8);
+                    margin-right: pr(10);
+                    font-size: pr(22);
+                }
+            }
+        }
+    }
+   
+
+    //设置主体部分
+    .main {
+        overflow: hidden;
+        flex: 1;
+        background-color: #f1f1f1;
+        display: flex;
+        flex-wrap: wrap;
+        .outer {
+            padding: pr(3);
+            width: 50%;
+            .inner {
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+                img {
+                    width: pr(130);
+                    height: pr(130);
+                    display: block;
+                    margin: 0 auto;
+                }
+                .title {
+                    text-align: center;
+                    font-size: pr(14);
+                    line-height: pr(30);
+                    height: pr(30);
+                    margin: pr(4) pr(0);
+                    color: #333;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                .subtitle {
+                    height: pr(30);
+                    line-height: pr(30);
+                    color: #ff841d;
+                    font-size: pr(20);
+                    padding-left: pr(10);
+                    margin-bottom: pr(4);
+                    .gotogether {
+                        float: right;
+                        width: pr(60);
+                        height: pr(26);
+                        background-color: #ff841d;
+                        color: #fff;
+                        border-radius: pr(4);
+                        margin-right: pr(10);
+                        font-size: pr(16);
+                    }
+                }
+            }
+        }
+    }
+
+}

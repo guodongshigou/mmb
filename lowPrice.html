@@ -7,8 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./lib/mui/dist/css/mui.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="./css/lowPrice.css">
     
+=======
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/lowPrice.css">
+
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
     <script src="./lib/jquery/jquery3.min.js"></script>
     <script src="./lib/mui/dist/js/mui.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
@@ -16,6 +22,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="header">
         <a href="javascript:void(0)" class="back">
             <i class="mui-icon mui-icon-back"></i>
@@ -23,12 +30,22 @@
         <span class="title">白菜价-淘宝内部券</span>
         <a href="#" class="downloadApp">
             <img src="./image/download.png" alt="">
+=======
+    <div class="header" id="header">
+        <a href="javascript:void(0)" class="back">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <span class="title">白菜价-淘宝内部券</span>
+        <a href="#" class="downloadApp">
+            <img src="./images/download.png" alt="">
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
         </a>
     </div>
     <div class="main">
         <div class="Topnav">
             <div class="mui-scroll-wrapper mui-slider-indicatorcode mui-segmented-control mui-segmented-control-inverted">
                 <div class="mui-scroll">
+<<<<<<< HEAD
                     <a href="javascript:void(0)" class="active">哈哈</a>
                     <a href="javascript:void(0)">哈哈</a>
                     <a href="javascript:void(0)">哈哈</a>
@@ -40,11 +57,15 @@
                     <a href="javascript:void(0)">哈哈</a>
                     <a href="javascript:void(0)">哈哈</a>
                     <a href="javascript:void(0)">哈哈</a>
+=======
+
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
                 </div>
             </div>
         </div>
         <div class="goodList">
             <ul>
+<<<<<<< HEAD
                 <li>
                     <div class="image">
                         <img src="" alt="">
@@ -73,3 +94,55 @@
 </body>
 
 </html>
+=======
+
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="bar">
+            <a class="login" href="#">登录</a>
+            <a class="register" href="#">注册</a>
+            <a class="top" href="#header">
+                <span class="fa fa-arrow-up"></span>返回顶部</a>
+        </div>
+        <div class="content">
+            <p class="title">
+                <span class="app">手机APP下载</span>
+                <span>慢慢买手机版 -- 掌上比价平台</span>
+            </p>
+            <p class="web">m.manmanbuy.com</p>
+        </div>
+        <a href="#header" class="fixed">
+            <i class="fa fa-arrow-up"></i>
+        </a>
+    </div>
+</body>
+
+</html>
+<script type="text/html" id="topNavTpl">
+    {{each list value key}}
+    <a href="javascript:void(0)" class="{{if(key == 0)}}active{{/if}}" data-titleid='{{value.titleId}}'>{{value.title}}</a>
+    {{ /each }}
+</script>
+
+<script type="text/html" id="productTpl">
+    {{ each list value }}
+    <li>
+        <div class="image">
+            {{#value.productImg}}
+        </div>
+        <div class="info">
+            <p class="des">{{#value.productName}}</p>
+            <p class="price">
+                {{#value.productPrice}}
+            </p>
+            {{#value.productCouponRemain}}
+            <p class="bottom">
+                {{#value.productCoupon}} {{#value.productHref}}
+            </p>
+        </div>
+    </li>
+    {{ /each }}
+</script>
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d

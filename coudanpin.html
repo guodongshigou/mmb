@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买-凑单品</title>
+    <script>
+        //设置rem
+        document.documentElement.style.fontSize = window.screen.width / 10 + "px";
+    </script>
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/coudanpin.css">
+</head>
+
+<body>
+    <!-- 最外层的大盒子 -->
+    <div class="container">
+        <!-- 头部通用部分 -->
+        <div class="header">
+            <a class="left fa fa-angle-left" href="javascript:goback();"></a>
+            <span>凑单品</span>
+            <a href="#" class="right">
+                <img src="images/download.png">
+            </a>
+        </div>
+        <!-- 选择部分 -->
+        <div class="content">
+            <!-- 筛选条 -->
+            <div class="bar">
+                <div class="searchkey business">
+                    <span class="storeName">京东</span>
+                    <span class="fa fa-caret-down"></span>
+                </div>
+                <div class="searchkey area">
+                    <span class="addrName">华北</span>
+                    <span class="fa fa-caret-down"></span>
+                </div>
+                <div class="searchkey allPrice">
+                    <span >全部价格</span>
+                    <span class="fa fa-caret-down"></span>
+                </div>
+                <div class="searchbox fa fa-search"></div>
+            </div>
+            <!-- 选择数据展示模板 -->
+            <ul class="list">
+                
+            </ul>
+            <ul class="areashop">
+                
+            </ul>
+        </div>
+
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 总数据展示:可以考虑栅格布局 -->
+            
+        </div>
+
+    </div>
+</body>
+<!-- 店铺数据模板 -->
+<script type="text/html" id="shoplist">
+    {{each result v i }}
+    <li data-shopid="{{ v.shopId }}">
+        <span class="title">{{v.shopName}}</span>
+        <span class="fa {{if i==0 }} fa-check {{/if}}"></span>
+    </li>
+    {{/each}}
+</script>
+
+<!-- 区域数据模板 -->
+<script type="text/html" id="arealist">
+    {{each result v i }}
+    <li data-areaid="{{ v.areaId }}">
+        <span class="title">{{v.areaName}}</span>
+        <span class="fa {{if i==0 }} fa-check {{/if}}"></span>
+    </li>
+    {{/each}}
+</script>
+
+<!-- 商品数据模板 -->
+<script type="text/html" id="productlist">
+    {{each result v i}}
+    <div class="outer">
+        <div class="inner">
+            <img src="{{v.productImg}}" alt="">
+            <p class="title" title="{{v.productName}}">{{v.productName}}</p>
+            <p class="subtitle" > 
+                <span class="price">{{v.productPrice}}</span>
+                <button class="gotogether">去凑单</button>
+            </p>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+</html>
+<script src="./lib/jquery/jquery3.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/coudanpin.js"></script>
