@@ -114,6 +114,7 @@ body {
 }
 
 .main {
+  position: relative;
   margin-bottom: 0.5333333333rem;
 }
 .main .Topnav {
@@ -198,9 +199,18 @@ body {
   border-radius: 0.16rem;
   color: #fff;
   display: flex;
-  justify-content: center;
   align-items: center;
   font-weight: bold;
+  position: relative;
+}
+.main .goodList ul li .info .bar i em {
+  height: 100%;
+  background-color: #ff5e5d;
+}
+.main .goodList ul li .info .bar i span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 .main .goodList ul li .info .bar b {
   color: #fc353a;
@@ -216,6 +226,9 @@ body {
   color: #e4393c;
   height: 0.64rem;
   padding: 0.1066666667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main .goodList ul li .info .bottom a:last-child {
   width: 1.5466666667rem;
