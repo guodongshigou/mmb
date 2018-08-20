@@ -1,0 +1,26 @@
+@import "./comon.scss";
+
+.header{
+
+    .mui-icon {
+        display: flex;
+        font-size: pr(60);
+    }
+
+    .right {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: pr(10);
+        margin-top: pr(10);
+
+        .download{
+            display: flex;
+            justify-content: center;
+          }
+  }
+
+    a{
+        font-size: pr(20);
+        color: #ffeef0;
+    }
+}   

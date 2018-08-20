@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/moneyctrl1.css">
+    <script src="./lib/jquery/jquery3.min.js"></script>
+    <link rel="stylesheet" href="./lib/mui/dist/css/mui.min.css">
+    <script src="./lib/mui/dist/js/mui.min.js"></script>
+
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="./css/comon.css">
+    <script src="./js/moneyctrl1.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header" id="header">
+            <div class="left">
+                <a href="#" class="mui-icon mui-icon-back"></a>
+            </div>
+            <h3>省钱控-最新优惠</h3>
+            <div class="right">
+                <a href="#">
+                    <span class="mui-icon mui-icon-download download"></span>APP下载</a>
+            </div>
+        </div>
+
+        <!-- 主体 -->
+        <div class="main">
+            <ul>
+                <!-- <li>
+                    <div class="left">
+                        <img src="./images/01.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="slgan">
+                            移动凑单单品:海天 鲜味 生抽 1.28L
+                            <span class="pirce">10.9元</span>
+                        </div>
+
+                        <div class="hint">
+                            <span class="info">
+                                京东商城 | 10-25 14:00
+                            </span>
+                            <span class="informetion">
+                                <span class="mui-icon mui-icon-chat" style="font-size: 16px" ></span>
+                                <span>1</span>
+                            </spa>
+                        </div>
+
+                    </div>
+
+                </li> -->
+            </ul>
+
+        </div>
+   
+        <!-- 底部 -->
+        <div class="footer">
+                <div class="mui-content-padded">
+                        <ul class="mui-pager">
+                                <li class="mui-previous">
+                                    <a>
+                                        上一页
+                                    </a>
+                                </li>
+                                <li id="pagenum">
+                                    0/0
+                                </li>
+                                <li class="mui-next">
+                                    <a>
+                                        下一页
+                                    </a>
+            
+            
+                                </li>
+                            </ul>
+                </div>
+
+            <div class="foot_top">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#header" class="back">
+                    <img src="./images/top.jpg" width="15" height="15"> 返回顶部
+                </a>
+            </div>
+            <div class="foot_bottom">
+                <p>
+                    <a href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/html" id="product">
+        {{each result v i}}
+        <li>
+            <!-- <a href="www.baidu.com?productId={{v.productId}}"> -->
+            <a href="http://www.baidu.com">
+            <div class="left">
+                {{@v.productImgSm}}
+            </div>
+            <div class="right">
+                <div class="slgan">
+                    {{v.productName}}
+                    <span class="pirce">{{v.productPinkage}}</span>
+                </div>
+
+                <div class="hint">
+                    <span class="info">
+                        {{v.productFrom}} | {{v.productTime}}
+                    </span>
+                    <span class="informetion">
+                        <span class="mui-icon mui-icon-chat" style="font-size: 16px" ></span>
+                        <span>{{v.productComCount}}</span>
+                    </spa>
+                </div>
+
+            </div>
+        </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>
