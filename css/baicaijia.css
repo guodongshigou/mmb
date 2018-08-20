@@ -121,7 +121,7 @@ body {
   height: 1.0666666667rem;
   background-color: #fff;
   line-height: 1.0666666667rem;
-  padding: 0 0.4rem;
+  padding: 0 0.2666666667rem;
   position: relative;
 }
 .main .Topnav .mui-scroll-wrapper {
@@ -239,6 +239,7 @@ body {
   background-color: #ff5e5d;
   color: #fff;
   border-radius: 0.08rem;
+  font-size: 0.32rem;
 }
 
 .footer {

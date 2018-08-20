@@ -126,7 +126,7 @@ body {
         height: pr(40);
         background-color: #fff;
         line-height: pr(40);
-        padding: 0 pr(15);
+        padding: 0 pr(10);
         position: relative;
         .mui-scroll-wrapper {
             height: 100%;
@@ -243,6 +243,7 @@ body {
                             background-color: #ff5e5d;
                             color: #fff;
                             border-radius: pr(3);
+                            font-size: pr(12);
                         }
                     }
                 }
