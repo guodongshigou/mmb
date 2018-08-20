@@ -1,0 +1,320 @@
+@charset "UTF-8";
+p,
+div,
+span,
+img,
+a,
+input,
+ol,
+ul,
+li,
+i,
+em,
+strong,
+h1,
+h2,
+h3,
+h4,
+body,
+del {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #5c6066;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+input {
+  outline: 0 none;
+  border: 0 none;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+button {
+  outline: 0 none;
+  border: 0 none;
+  background-color: #fff;
+}
+
+body {
+  font: 12px/100% '微软雅黑';
+  background-color: #ffffff;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 1.3333333333rem;
+  background-color: #ff841d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.1866666667rem 0 0.4533333333rem;
+}
+.container .header .left img {
+  height: 0.6666666667rem;
+}
+.container .header .right img {
+  height: 0.9333333333rem;
+}
+.container .searchbar {
+  height: 1.36rem;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .searchbar .inner {
+  width: 9.4666666667rem;
+  height: 0.8rem;
+  position: relative;
+}
+.container .searchbar .inner .search {
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  border-radius: 0.4rem;
+  padding-left: 0.48rem;
+}
+.container .searchbar .inner .search ::placeholder {
+  color: #929292;
+  font-size: 0.4266666667rem;
+}
+.container .searchbar .inner .searchbtn {
+  width: 1.68rem;
+  height: 100%;
+  border-radius: 0.4rem;
+  background-color: #ff841d;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.4266666667rem;
+}
+.container .main {
+  flex: 1;
+}
+.container .footer {
+  height: 2.5333333333rem;
+  background-color: #efefef;
+  border-top: 1px solid #c4c4c4;
+  display: flex;
+  flex-direction: column;
+}
+.container .footer .bar {
+  height: 0.9066666667rem;
+  border-bottom: 1px solid #c4c4c4;
+  display: flex;
+}
+.container .footer .bar a {
+  font-size: 0.3466666667rem;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .footer .bar .login {
+  width: 2.9866666667rem;
+  border-right: 1px solid #c4c4c4;
+}
+.container .footer .bar .register {
+  width: 2.96rem;
+  border-right: 1px solid #c4c4c4;
+}
+.container .footer .bar .top {
+  flex: 1;
+}
+.container .footer .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .footer .content .title {
+  font-size: 0.32rem;
+  color: #666666;
+  margin-bottom: 0.1866666667rem;
+}
+.container .footer .content .title .app {
+  color: #ff0000;
+}
+.container .footer .content .web {
+  font-size: 0.2666666667rem;
+  color: #666666;
+}
+
+.main {
+  background-color: #fff;
+}
+.main .xinxi {
+  padding: 0rem 0.2666666667rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.main .xinxi .productName {
+  padding-top: 0.5333333333rem;
+  width: 100%;
+  font-size: 0.4266666667rem;
+  color: #000;
+}
+.main .xinxi .productPrice {
+  width: 100%;
+  font-size: 0.3733333333rem;
+  color: orangered;
+}
+.main .xinxi span {
+  font-size: 0.2666666667rem;
+  line-height: 20px;
+  color: #5c5b5b;
+}
+.main .chanpin {
+  display: flex;
+  width: 100%;
+}
+.main .chanpin p {
+  padding: 0.2666666667rem;
+  flex: 2;
+}
+.main .chanpin div {
+  flex: 1;
+  padding: 0.2666666667rem;
+}
+.main .chanpin div img {
+  width: 100%;
+}
+.main .chanpintu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5333333333rem;
+}
+.main .chanpintu img {
+  height: 5.3333333333rem;
+}
+.main .goumai {
+  display: flex;
+  padding: 0.2666666667rem;
+  justify-content: center;
+  align-items: center;
+}
+.main .goumai div {
+  width: 100%;
+  height: 0.8rem;
+  background-color: orange;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  line-height: 0.8rem;
+}
+.main .goumai div p {
+  color: #fff;
+}
+.main .weixin {
+  padding: 0.2666666667rem;
+}
+.main .weixin img {
+  width: 100%;
+}
+.main .pinlun {
+  padding: 0.2666666667rem;
+  width: 100%;
+}
+.main .pinlun .shuru {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.main .pinlun .shuru p {
+  font-size: 0.4266666667rem;
+  color: #000;
+}
+.main .pinlun .shuru .wenzi {
+  height: 5.3333333333rem;
+  width: 100%;
+  border: 0.0266666667rem solid #ccc;
+}
+.main .pinlun .shuru button {
+  background-color: #fcb839;
+  color: #fff;
+  align-self: flex-end;
+}
+.main .pinlun .fabu p {
+  color: #0f0f0f;
+  padding-top: 0.2666666667rem;
+  font-size: 0.4266666667rem;
+}
+.main .pinlun .fabu .zhiliao {
+  display: flex;
+}
+.main .pinlun .fabu .zhiliao .a {
+  display: flex;
+  width: 50%;
+  border-radius: 50%;
+}
+.main .pinlun .fabu .zhiliao .a .aa {
+  width: 50%;
+}
+.main .pinlun .fabu .zhiliao .a .aa .yonhu {
+  color: #2d76d6;
+}
+.main .pinlun .fabu .zhiliao .a .tupian {
+  width: 50%;
+  padding: 0.2666666667rem;
+}
+.main .pinlun .fabu .zhiliao .a .tupian img {
+  width: 100%;
+}
+.main .pinlun .fabu .zhiliao .b {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.main .pinlun .fabu .zhiliao .b p {
+  font-size: 0.4266666667rem;
+  color: #6e6d6d;
+  padding-right: 0.2666666667rem;
+}
+
+/*# sourceMappingURL=xiangqing.css.map */

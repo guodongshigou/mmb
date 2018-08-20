@@ -1,0 +1,194 @@
+//将px转换为rem
+@import "./common.scss";
+
+  .main {
+         background-color: #fff;
+
+       .xinxi {
+            padding: pr(0) pr(10);
+            display: flex;
+            flex-wrap:wrap; 
+            justify-content: flex-start; 
+            // 主轴居中
+
+           .productName {
+               padding-top: pr(20);
+               width: 100%;
+               font-size: pr(16);
+               color:  #000;
+            //    padding: pr(10) pr(0);
+            }
+
+           .productPrice {
+            width: 100%;
+            font-size: pr(14);
+            color: orangered;
+            // padding: pr(10) pr(0);
+            }
+
+            span {
+            font-size: pr(10);
+            line-height: 20px;
+            color :rgb(92, 91, 91);
+            // padding: pr(10) pr(0);
+            }
+
+       }
+
+       .chanpin {
+        display: flex;
+        width: 100%;
+        
+        
+        p {
+            padding: pr(10);
+            flex: 2;
+        }
+
+        div {
+            flex: 1;
+            padding: pr(10);
+            img{
+                width: 100%;
+            }   
+        }
+
+        
+        }
+        .chanpintu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: pr(20);
+            img {
+                // width: 100%;
+                height: pr(200);
+            }        
+         }
+
+        .goumai {
+            display: flex;
+            padding: pr(10);
+            justify-content: center;
+            align-items: center;
+
+             div {
+                width: 100%;
+                height: pr(30);
+                background-color:orange;
+                border-radius:5px;
+                display: flex;
+                justify-content: center;
+                line-height: pr(30);
+
+                p {
+                    color: #fff;
+                }
+             }
+
+         }
+             
+
+        .weixin {
+                // display: flex;
+                padding: pr(10);
+                // justify-content: center;
+
+                img {
+                    width: 100%;
+                }
+             }
+
+        .pinlun {
+            padding: pr(10);
+            width: 100%;
+            .shuru {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                p {
+                    font-size: pr(16);
+                    color: #000;
+                }
+
+                .wenzi {
+                    height: pr(200);
+                    width: 100%;
+                    border: pr(1) solid #ccc;   
+                }
+
+                button {
+                    background-color: rgb(252, 184, 57);
+                    color: #fff;  
+                    align-self: flex-end; 
+                }
+                
+
+            }
+
+
+            .fabu {
+                // display: flex;
+                // padding-bottom: pr(20);
+               
+                p {
+                    color: rgb(15, 15, 15);
+                     padding-top: pr(10);
+                    font-size: pr(16);
+                }
+
+                .zhiliao {
+
+                    display: flex;
+                    .a {
+                        display: flex;
+                        width: 50%;
+                        border-radius:50%;
+                        .aa {
+                            width: 50%;
+                            .yonhu {
+                                color: rgb(45, 118, 214);
+                            }
+                           
+                        }
+                        .tupian{
+                            width: 50%;
+                            padding: pr(10);
+                            img {
+                                width: 100%;
+                            } 
+                        }
+                        
+                    }
+    
+                    .b {
+                        width: 50%;
+                        display: flex;
+                        justify-content: flex-end;
+                        p {
+                           font-size: pr(16);
+                           color: rgb(110, 109, 109);
+                            padding-right: pr(10);
+                        }
+                    }
+    
+                   
+                }
+
+                
+            }
+        }
+             
+             
+
+
+
+        
+
+
+        
+
+
+
+
+  }
