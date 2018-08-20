@@ -127,7 +127,7 @@ $(function(){
                     document.body.scrollTop = document.documentElement.scrollTop = 0;
 
                     //7.9 调用关闭侧栏的函数
-                   // $("#my-button").click();
+                   $("#my-button").click();
 
                 });
 
