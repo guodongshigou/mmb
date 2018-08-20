@@ -1,0 +1,175 @@
+@import "./common.scss";
+
+body, html {
+    height: 100%;
+}
+
+//头部
+.container{
+    height: 100%;
+
+    .main {
+        position: relative;
+
+        .nav{
+            display: flex;
+            flex-wrap: wrap;
+    
+            a{
+                width: 25%;
+                height: pr(102);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+    
+                img{
+                    height: pr(50);
+                }
+    
+                .navName{
+                    font-size: pr(12);
+                    color: #000;
+                }
+            }
+            a:nth-child(n+9).active {
+                height: pr(0);
+                width: 25%;
+                display: none;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+            a:nth-child(n+9).activeout {
+                height: pr(102);
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            
+
+            
+        }
+
+        .productDiscount{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            
+            .productNav{
+                height: pr(35);
+                background-color: #ffa42d;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: pr(0) pr(10);
+
+                span{
+                    color: #fff;
+                    font-size: pr(20);
+                    font-weight: bold;
+                }
+                img{
+                    width: pr(20);
+                }
+
+            }
+
+            .productLists{
+                li{
+                    height: pr(128);
+                    display: flex;
+                    padding: pr(0) pr(10);
+                    border-bottom: pr(2) solid #e0e0e0;
+    
+                    .productImage{
+                        flex: 1;
+                        padding: pr(15) pr(10) pr(15) pr(0);
+                        
+                        img{
+                            width: 100%;;
+                        }
+                    }
+        
+                    .productInfo{
+                        flex: 3;
+                        display: flex;
+                        flex-direction: column;
+                        
+        
+                        .productTop{
+                            flex: 1;
+                            display: block;
+                            padding-top: pr(17);
+    
+                            .productName{
+                                font-size: pr(12);
+                                color: #333333;
+                                line-height: pr(16);
+                                
+                            }
+    
+                            .productPinkage{
+                                color: #ffa42d;
+                            }    
+                        }
+    
+                        .productBottom{
+                            flex: 1;
+                            display: flex;
+                            justify-content: space-between;
+                            padding-top: pr(21);
+    
+                            .whereFrom{
+                                flex: 1;
+                                span{
+                                    font-size: pr(10);
+                                    color: #a7a7a7;
+                                    line-height: 40px;
+                                }
+                                
+                            }
+    
+                            .comment {
+                                flex: 1; 
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                span{
+                                    font-size: pr(10);
+                                    color: #a7a7a7;
+                                    margin-left: pr(4);
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+        }
+
+        .moreInfo{
+            display: flex;
+            height: pr(45);
+            padding: pr(10) pr(10) pr(20) pr(10);
+            background-color: #f2f2f2;
+            a{
+                height: pr(30);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: pr(1) solid #dddddd;
+                color: #a0a0a0;
+                font-size: pr(14);
+                background-color: #fff;
+                
+            }
+
+        }
+    }
+
+}
