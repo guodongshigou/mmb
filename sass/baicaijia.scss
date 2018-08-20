@@ -1,4 +1,93 @@
-@import "common.scss";
+//初始化代码
+p,
+div,
+span,
+img,
+a,
+input,
+ol,
+ul,
+li,
+i,
+em,
+strong,
+h1,
+h2,
+h3,
+h4,
+body,
+del {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #5c6066;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+
+input {
+    outline: 0 none;
+    border: 0 none;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+}
+
+button {
+    outline: 0 none;
+    border: 0 none;
+    background-color: #fff;
+}
+
+body {
+    font: 12px/100% '微软雅黑';
+    background-color: #ffffff;
+}
+
+// html,
+// body {
+//     height: 100%;
+// }
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+//将px转换为rem
+@function pr($p) {
+    @return $p/37.5+rem;
+}
+
 //头部
 body {
     background-color: #f7f7f7;
@@ -42,16 +131,20 @@ body {
         padding: 0 pr(15);
         position: relative;
         .mui-scroll-wrapper {
-            a {
-                line-height: pr(40);
-                margin-right: pr(21);
-                font-size: pr(15);
-                &:last-child {
-                    margin-right: 0;
-                }
-                &.active {
-                    color: #e4393c;
-                    box-shadow: 0 pr(25) 0 #ed1c24;
+            height: 100%;
+            .mui-scroll {
+                height: 100%;
+                a {
+                    margin-right: pr(21);
+                    padding: pr(8) 0;
+                    font-size: pr(14);
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &.active {
+                        color: #e4393c;
+                        border-bottom: pr(2) solid #ed1c24;
+                    }
                 }
             }
         }
@@ -144,6 +237,65 @@ body {
                     }
                 }
             }
+        }
+    }
+}
+.footer {
+    height: pr(95);
+    background-color: #efefef;
+    border-top: 1px solid #c4c4c4;
+    display: flex;
+    flex-direction: column;
+
+    .bar {
+        height: pr(34);
+        border-bottom: 1px solid #c4c4c4;
+        display: flex;
+
+        a {
+            font-size: pr(13);
+            color: #757575;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+
+        .login {
+            width: pr(112);
+            border-right: 1px solid #c4c4c4;
+        }
+
+        .register {
+            width: pr(111);
+            border-right: 1px solid #c4c4c4;
+        }
+
+        .top {
+            flex: 1;
+        }
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+            font-size: pr(12);
+            color: #666666;
+            margin-bottom: pr(7);
+
+            .app {
+                color: #ff0000;
+            }
+        }
+
+        .web {
+            font-size: pr(10);
+            color: #666666;
         }
     }
 }
