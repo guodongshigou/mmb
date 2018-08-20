@@ -1,0 +1,75 @@
+@import "./common.scss";
+
+.container{
+    width: 100%;
+    .main{
+        .nav{
+            height: pr(38);
+            width: 100%;
+            padding-left: pr(10);
+            font-size: pr(14);
+            line-height: pr(38);
+            border-top: pr(1) solid #ccc;
+            border-bottom: pr(1) solid #ccc;
+            background-color: #ebebeb;
+            a{
+                color: #5a5a5a;
+                &:last-child{
+                    color: #000;
+                }
+            }
+        }
+
+        .text{
+            height: pr(36);
+            font-size: pr(14);
+            padding-left: pr(10);
+            line-height: pr(36);
+        }
+
+
+        .list{
+            background-color: #ccc;
+            .mui-table-view{
+                li{
+                    display: flex;
+                    &::after{
+                        left: 0;
+                    }
+                    .left{
+                        span{
+                            display: block;
+                            width: pr(20);
+                            height: pr(20);
+                            background-color:red;
+                            line-height: pr(20);
+                            text-align: center;
+                            font-size: pr(14);
+                            color: #fff;
+                            background-color: #c9c9c9;
+                            &.res{
+                                background-color:red;
+                            }
+                            &.org{
+                                background-color: #ff9314;
+                            }
+                            &.cyan{
+                                background-color: #8adf5b;
+                            }
+                        }
+                    }
+                    .right{
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: pr(10);
+                        .num{
+                            font-size: pr(14);
+                            color: #999;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

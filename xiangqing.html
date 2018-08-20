@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery/jquery3.min.js"></script>
+    <script>
+        //设置rem
+        document.documentElement.style.fontSize = window.screen.width / 10 + "px";
+    </script>
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/list.css">
+    <link rel="stylesheet" href="./css/xiangqing.css">
+    <link rel="stylesheet" href="./lib/mui/dist/css/mui.min.css">
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/dist/js/mui.min.js"></script>
+    <script src="./js/xiangqing.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部通用部分 -->
+        <div class="header">
+            <a class="left" href="index.html">
+                <img src="./images/title.png" alt="">
+            </a>
+            <a href="#" class="right">
+                <img src="./images/download.png" alt="">
+            </a>
+        </div>
+        <!-- 搜索通用部分 -->
+        <div class="searchbar">
+            <div class="inner">
+                <input type="text" class="search" placeholder="请输入你想比价的商品">
+                <button class="searchbtn">搜索</button>
+            </div>
+        </div>
+
+
+        <!-- 主体部分 -->
+        <div class="main"></div>
+
+        <script type="text/html" id="tep">
+            {{each result v i}}
+            <div class="xinxi">
+                    <p class="productName">{{v.productName}}</p>
+                    <p class="productPrice">{{v.productPrice}}元</p>
+                    <span class="productFrom">{{v.productFrom}}</span>
+                    <span class="productTime">{{v.productTime}}</span>
+                    <span class="productTips">{{v.productTips}}</span>
+                </div>
+                <div class="chanpin">   
+                    <p>{{v.productInfo}}</p>
+                    <div>
+                        {{#v.productImg}}
+                    </div>
+                    
+                </div>
+                <div class="chanpintu">
+                    {{#v.productImg}}
+                </div>
+    
+                <div class="goumai">
+                    <div>
+                        <p>前往购买</p>
+                    </div>
+                </div>
+    
+                <div class="weixin">
+                    <img src="./images/mmbweixin2.png" alt="">
+                </div>
+    
+                <div class="pinlun">
+                        {{#v.productComment}} 
+                    
+    
+                    <div class="fabu">
+                        <div class="zhiliao">
+                            <div class="a">
+                                <div class="tupian">
+                                    <img src="images/ic_bcj.png" alt="">
+                                </div>
+                                
+                                <div class="aa">
+                                    <p class="yonhu">用户名字</p>
+                                    <p>用户签名</p> 
+                                </div>
+                                    
+                            </div>
+                            
+                            <div class="b">
+                                <p>2018-8-20 13:11</p>
+                            </div>
+                        </div>  
+
+                        
+                    </div>
+                     
+    
+                </div>
+                 
+                {{/each}}
+        
+        </script>
+
+
+        <!-- 底部通用部分 -->
+        <div class="footer">
+            <div class="bar">
+                <a class="login" href="#">登录</a>
+                <a class="register" href="#">注册</a>
+                <a class="top" href="#">
+                    <span class="fa fa-arrow-up"></span>返回顶部</a>
+            </div>
+            <div class="content">
+                <p class="title">
+                    <span class="app">手机APP下载</span>
+                    <span>慢慢买手机版 -- 掌上比价平台</span>
+                </p>
+                <p class="web">m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script id="productid" type="text/html">
+        {{each v i}}
+            <div class="">
+
+            </div>
+
+        {{/each}}
+
+    </script> -->
+
+</body>
+
+</html>

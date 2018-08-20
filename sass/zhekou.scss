@@ -1,0 +1,46 @@
+//将px转换为rem
+@import "./common.scss";
+
+.header {
+    background-color: #ff841d;
+}
+
+//设置商品通用样式
+.container {
+    .main{
+        display: flex; 
+        flex-wrap:wrap;
+        .chanping {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: pr(265);
+            padding: pr(0)  pr(10);
+            justify-content: space-around;
+            border-bottom: 1px solid #ccc;
+
+            &:nth-child(2n-1){
+                border-right:1px solid #ccc; 
+                }
+            img {
+                width: 100%;  
+            }   
+           .a {
+               line-height: pr(20);
+               font-size: pr(14);
+               color: #333333;
+           }
+           .b {
+               font-size: pr(14);
+               color: orange;
+           } 
+           .c {
+               padding-bottom: 10px;
+                span{
+                    font-size: pr(12);
+                    color: #ccc;
+                }
+           } 
+        }
+    }
+}

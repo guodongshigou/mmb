@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //设置rem
+        document.documentElement.style.fontSize = window.screen.width / 10 + "px";
+    </script>
+
+    <!-- 引入第三方插件 -->
+    <script src="./lib/jquery/jquery3.min.js"></script>
+    <link rel="stylesheet" href="./lib/mui/dist/css/mui.min.css">
+    <script src="./lib/mui/dist/js/mui.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <!-- 引入css和js -->
+    <link rel="stylesheet" href="./css/couponproduct.css">
+    <script src="./js/couponproduct.js"></script>
+</head>
+
+<body>
+    <!-- 最外层大盒子 -->
+    <div class="container">
+
+        <!-- 头部 -->
+        <div class="header">
+            <a href="./coupon.html" class="backbutton">
+                <span class="mui-icon mui-icon-back"></span>
+            </a>
+            <h4 class="title">优惠券</h4>
+            <a href="#" class="download">
+                <img src="./images/download.png">
+            </a>
+        </div>
+
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 用MUI框架实现区域滚动功能 -->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 优惠券使用说明 -->
+                    <span class="descript">--点餐前请出示手机中的优惠券，即可享受优惠--</span>
+                    <!-- 优惠券产品列表 -->
+                    <div class="couponproducts">
+
+                        <!-- 优惠券列表坑 -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 遮罩层 -->
+    <div class="bg"></div>
+
+    <!-- 轮播图 -->
+    <div class="lb">
+        
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+                <!-- 轮播图片坑 -->
+
+            </div>          
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <!-- 设置优惠券详情模板 -->
+    <script type="text/html" id="couponlists">
+        {{each list value}}
+            <div class="couponproduct" data-pic="{{value.couponProductImg}}">
+                <div class="left">
+                    {{@value.couponProductImg}}
+                </div>
+                <div class="right">
+                    <div class="detail">
+                        <div class="more">
+                            <span class="title">{{value.couponProductName}}</span>
+                            <span class="price">{{value.couponProductPrice}}</span>
+                        </div>
+                        <div class="time">{{value.couponProductTime}}</div>
+                    </div>
+                    <i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+
+    <!-- 轮播图图片展示模板 -->
+    <script type="text/html" id="picslide">
+        {{each list value}}
+            <div class="swiper-slide">
+                {{@value.couponProductImg}}
+            </div>
+        {{/each}}
+    </script>
+
+</body>
+
+</html>
