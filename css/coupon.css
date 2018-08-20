@@ -1,0 +1,236 @@
+@charset "UTF-8";
+p,
+div,
+span,
+img,
+a,
+input,
+ol,
+ul,
+li,
+i,
+em,
+strong,
+h1,
+h2,
+h3,
+h4,
+body,
+del {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #5c6066;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+input {
+  outline: 0 none;
+  border: 0 none;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+button {
+  outline: 0 none;
+  border: 0 none;
+  background-color: #fff;
+}
+
+body {
+  font: 14px/100% '微软雅黑';
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  position: fixed;
+  z-index: 100;
+  height: 1.2rem;
+  width: 100%;
+  background-color: #f4483e;
+  padding: 0rem 0.2666666667rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header .backbutton {
+  color: #fff;
+}
+.container .header .title {
+  color: #fff;
+}
+.container .header .download img {
+  height: 0.9333333333rem;
+}
+.container .main {
+  flex: 1;
+  background-color: #fff;
+  position: relative;
+  margin-top: 1.2rem;
+}
+.container .main .couponbrands {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.2666666667rem;
+  margin-bottom: 0.8rem;
+}
+.container .main .couponbrands .couponbrand {
+  width: 33.33333%;
+  padding: 0.1066666667rem;
+}
+.container .main .couponbrands .couponbrand .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.0266666667rem solid #ccc;
+  padding: 0.5333333333rem;
+}
+.container .main .couponbrands .couponbrand .box img {
+  width: 100%;
+}
+.container .main .couponbrands .couponbrand .box .brand {
+  color: #666;
+  font-size: 0.3733333333rem;
+  margin-top: 0.0266666667rem;
+}
+.container .footer {
+  height: 4rem;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.container .footer .breadcrumb {
+  height: 0.8533333333rem;
+  background-color: #efefef;
+  border-top: 0.0266666667rem solid #ccc;
+  border-bottom: 0.0266666667rem solid #ccc;
+}
+.container .footer .breadcrumb .crumbs {
+  padding-left: 10px;
+}
+.container .footer .breadcrumb .crumbs li {
+  float: left;
+  height: 0.8533333333rem;
+  line-height: 0.8533333333rem;
+}
+.container .footer .breadcrumb .crumbs li a {
+  display: block;
+  float: left;
+  color: #666;
+  font-size: 0.4rem;
+}
+.container .footer .breadcrumb .crumbs li span {
+  display: block;
+  float: left;
+  padding-left: 0.0533333333rem;
+  padding-right: 0.16rem;
+  color: #666;
+}
+.container .footer .box {
+  flex: 1;
+  margin-top: 0.5333333333rem;
+  border-top: 0.0266666667rem solid #c4c4c4;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+}
+.container .footer .box .footbar {
+  height: 0.8rem;
+  border-bottom: 0.0266666667rem solid #c4c4c4;
+  display: flex;
+  align-items: center;
+}
+.container .footer .box .footbar a {
+  height: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 0.4rem;
+}
+.container .footer .box .footbar .login {
+  flex: 1;
+  border-right: 0.0266666667rem solid #d9d9d9;
+}
+.container .footer .box .footbar .regist {
+  flex: 1;
+  border-right: 0.0266666667rem solid #d9d9d9;
+}
+.container .footer .box .footbar .totop {
+  flex: 1.5;
+}
+.container .footer .box .footbar .totop img {
+  width: 0.3733333333rem;
+}
+.container .footer .box .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .footer .box .content .title {
+  font-size: 0.32rem;
+  color: #666666;
+  margin-bottom: 0.1866666667rem;
+}
+.container .footer .box .content .title .app {
+  color: #ff0000;
+}
+.container .footer .box .content .title .app1 {
+  color: #000;
+}
+.container .footer .box .content .web {
+  font-size: 0.2666666667rem;
+  color: #666666;
+}
+
+/*# sourceMappingURL=coupon.css.map */

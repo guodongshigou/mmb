@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //设置rem
+        document.documentElement.style.fontSize = window.screen.width / 10 + "px";
+    </script>
+
+    <!-- 引入第三方插件 -->
+    <script src="./lib/jquery/jquery3.min.js"></script>
+    <link rel="stylesheet" href="./lib/mui/dist/css/mui.min.css">
+    <script src="./lib/mui/dist/js/mui.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <!-- 引入css和js -->
+    <link rel="stylesheet" href="./css/coupon.css">
+    <script src="./js/coupon.js"></script>
+</head>
+
+<body>
+    <!-- 最外层大盒子 -->
+    <div class="container">
+
+        <!-- 头部 -->
+        <div class="header">
+            <a href="index.html" class="backbutton">
+                <span class="mui-icon mui-icon-back"></span>
+            </a>
+            <h4 class="title">优惠券</h4>
+            <a href="#" class="download">
+                <img src="./images/download.png">
+            </a>
+        </div>
+
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- 用MUI框架实现区域滚动功能 -->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 优惠券品牌展示 用模板生成-->
+                    <div class="couponbrands">
+
+                        <!-- 优惠券品牌展示坑 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部区域 -->
+        <div class="footer">
+
+            <!-- 面包屑导航 -->
+            <div class="breadcrumb">
+                <ul class="crumbs">
+                    <li>
+                        <a href="./index.html">首页</a>
+                    </li>
+                    <li>
+                        <span>></span>
+                    </li>
+                    <li>
+                        <a href="./coupon.html">优惠券</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 底部 -->
+            <div class="box">
+                <div class="footbar">
+                    <a href="#" class="login">登录</a>
+                    <a href="#" class="regist">注册</a>
+                    <a href="#" class="totop">
+                        <img src="./images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+                
+                <div class="content">
+                    <p class="title">
+                        <a href="#" class="app">手机APP下载</a>
+                        <span class="app1">慢慢买手机版</span>
+                        <span>-- 掌上比价平台</span>
+                    </p>
+                    <p class="web">m.manmanbuy.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 设置优惠券模板 -->
+    <script type="text/html" id="coupontpl">
+        {{each list value}}
+            <div class="couponbrand">
+                <a href="{{value.couponLink}}" class="box" data-id="{{value.couponId}}">
+                    <img src="{{value.couponImg}}" alt="">
+                    <span class="brand">{{value.couponTitle}}</span>
+                </a>
+            </div>
+        {{/each}}
+    </script>
+</body>
+
+</html>

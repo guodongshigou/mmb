@@ -1,0 +1,279 @@
+//初始化代码
+p,
+div,
+span,
+img,
+a,
+input,
+ol,
+ul,
+li,
+i,
+em,
+strong,
+h1,
+h2,
+h3,
+h4,
+body,
+del {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #5c6066;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+
+input {
+    outline: 0 none;
+    border: 0 none;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+}
+
+button {
+    outline: 0 none;
+    border: 0 none;
+    background-color: #fff;
+}
+
+body {
+    font: 14px/100% '微软雅黑';
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+//将px转换为rem
+@function pr($p) {
+    @return $p/37.5 + rem;
+}
+
+//设置样式
+.container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    //设置头部样式
+    .header {
+        position: fixed;
+        z-index: 100;
+        height: pr(45);
+        width: 100%;
+        background-color: #f4483e;
+        padding: pr(0) pr(10);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .backbutton {
+            color: #fff;
+        }
+
+        .title {
+            color: #fff;
+        }
+
+        .download {
+            img {
+                height: pr(35);
+            }
+        }
+    }
+
+
+    //设置主体部分
+    .main {
+        flex: 1;
+        background-color: #fff;
+        position: relative;
+        margin-top: pr(45);
+
+        .couponbrands {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: pr(10);
+            margin-bottom: pr(30);
+
+            .couponbrand {
+                width: 33.33333%;
+                padding: pr(4);
+
+                .box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    border: pr(1) solid #ccc;
+                    padding: pr(20);
+                
+                    img {
+                        width: 100%;
+                    }
+
+                    .brand {
+                        color: #666;
+                        font-size: pr(14);
+                        margin-top: pr(1);
+                    }
+                }
+            }
+        }
+    }
+
+    //设置底部样式
+    .footer {
+        height: pr(150);
+        width: 100%;
+        background-color: #fff;
+
+        display: flex;
+        flex-direction: column;
+
+        .breadcrumb {
+            height: pr(32);
+            background-color: #efefef;
+            border-top: pr(1) solid #ccc;
+            border-bottom: pr(1) solid #ccc;
+
+            .crumbs {
+                padding-left: 10px;
+                li {
+                    float: left;
+                    height: pr(32);
+                    line-height: pr(32);
+
+                    a {
+                        display: block;
+                        float: left;
+                        color: #666; 
+                        font-size: pr(15);
+                    }
+
+                    span {
+                        display: block;
+                        float: left;
+                        padding-left: pr(2);
+                        padding-right: pr(6);
+                        color: #666;
+                    }
+                }
+            }
+        }
+
+        .box {
+            flex: 1;
+            margin-top: pr(20);
+            border-top: pr(1) solid #c4c4c4;
+            background-color: #efefef;
+            
+            display: flex;
+            flex-direction: column;
+
+            .footbar {
+                height: pr(30);
+                border-bottom: pr(1) solid #c4c4c4;
+                display: flex;
+                align-items: center;
+
+                a {
+                    height: pr(30);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #666;
+                    font-size: pr(15);
+                }
+
+                .login {
+                    flex: 1;
+                    border-right: pr(1) solid #d9d9d9;
+                }
+
+                .regist {
+                    flex: 1;
+                    border-right: pr(1) solid #d9d9d9;
+                }
+
+                .totop {
+                    flex: 1.5;
+
+                    img {
+                        width: pr(14);
+                    }
+                }
+            }
+
+            .content {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+    
+                .title {
+                    font-size: pr(12);
+                    color: #666666;
+                    margin-bottom: pr(7);
+    
+                    .app {
+                        color: #ff0000;
+                    }
+    
+                    .app1 {
+                        color: #000;
+                    }
+                }
+    
+                .web {
+                    font-size: pr(10);
+                    color: #666666;
+                }
+            }
+
+        }
+    }
+}
