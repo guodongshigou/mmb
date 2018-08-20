@@ -67,10 +67,6 @@ body {
     background-color: #ffffff;
 }
 
-// html,
-// body {
-//     height: 100%;
-// }
 .clearfix::after {
     content: "";
     display: block;
@@ -124,6 +120,7 @@ body {
 }
 
 .main {
+    margin-bottom: pr(20);
     .Topnav {
         height: pr(40);
         background-color: #fff;
