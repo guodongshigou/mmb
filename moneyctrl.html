@@ -12,19 +12,20 @@
         document.documentElement.style.fontSize = window.screen.width / 10 + "px";
     </script>
     <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/list.css">
-    <link rel="stylesheet" href="./css/xiangqing.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/moneyctrl.css">
     <link rel="stylesheet" href="./lib/mui/dist/css/mui.min.css">
     <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/mui/dist/js/mui.min.js"></script>
-    <script src="./js/xiangqing.js"></script>
+    <script src="./js/moneyctrl.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
 </head>
 
 <body>
     <div class="container">
         <!-- 头部通用部分 -->
-        <div class="header">
+        <div class="header" id="header">
             <a class="left" href="index.html">
                 <img src="./images/title.png" alt="">
             </a>
@@ -89,12 +90,12 @@
                                     <p class="yonhu">用户名字</p>
                                     <p>用户签名</p> 
                                 </div>
-                                    
+                                <div class="b">
+                                    <p>2018-8-20 13:11</p>
+                                </div>
                             </div>
                             
-                            <div class="b">
-                                <p>2018-8-20 13:11</p>
-                            </div>
+                            
                         </div>  
 
                         
@@ -111,9 +112,9 @@
         <!-- 底部通用部分 -->
         <div class="footer">
             <div class="bar">
-                <a class="login" href="#">登录</a>
-                <a class="register" href="#">注册</a>
-                <a class="top" href="#">
+                <a class="login" href="">登录</a>
+                <a class="register" href="">注册</a>
+                <a class="top" href="#header">
                     <span class="fa fa-arrow-up"></span>返回顶部</a>
             </div>
             <div class="content">
