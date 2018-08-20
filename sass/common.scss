@@ -67,6 +67,10 @@ body {
     background-color: #ffffff;
 }
 
+// html,
+// body {
+//     height: 100%;
+// }
 
 .clearfix::after {
     content: "";
@@ -88,6 +92,8 @@ body {
 //设置样式
 .container {
     
+    // height: 100%;
+    padding: 0;
     display: flex;
     flex-direction: column;  
     
@@ -134,9 +140,9 @@ body {
                 border-radius: pr(15);
                 padding-left: pr(18);
 
-                ::placeholder {
+                &::placeholder {
                     color: #929292;
-                    font-size: pr(16);
+                    font-size: pr(14);
                 }
             }
     
@@ -149,7 +155,10 @@ body {
                 position: absolute;
                 right: 0;
                 top: 0;
-                font-size: pr(16);
+                font-size: pr(14);
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
     }
@@ -157,6 +166,7 @@ body {
     //设置主体部分
     .main {
         flex: 1;
+        min-height: pr(500);
     }
 
     //设置底部通用样式

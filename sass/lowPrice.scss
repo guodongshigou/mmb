@@ -101,7 +101,10 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+<<<<<<< HEAD
+=======
         font-size: pr(30);
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
     }
     .title {
         flex: 1;
@@ -126,6 +129,7 @@ body {
         line-height: pr(40);
         padding: 0 pr(10);
         .mui-scroll-wrapper {
+<<<<<<< HEAD
             height: 100%;
             .mui-scroll {
                 height: 100%;
@@ -150,6 +154,22 @@ body {
                         left: 0;
                         background-color: #ed1c24;
                     }
+=======
+            a {
+                line-height: pr(40);
+                margin-right: pr(21);
+                font-size: pr(15);
+                &:last-child {
+                    margin-right: 0;
+                }
+                &.active {
+                    color: #e4393c;
+<<<<<<< HEAD
+                    box-shadow: 0px pr(1) 0px #ed1c24;
+=======
+                    box-shadow: 0 pr(25) 0 #ed1c24;
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
+>>>>>>> 4c4fc012a7f1fa0e9692f0dba8f92c73513c8293
                 }
             }
         }
@@ -160,10 +180,22 @@ body {
                 width: 100%;
                 height: pr(147);
                 padding: pr(7) pr(10) pr(10);
+<<<<<<< HEAD
                 background-color: #fff;
+=======
+<<<<<<< HEAD
+                background-color: yellow;
                 margin-top: pr(6);
                 display: flex;
                 .image {
+                    background-color: yellowgreen;
+=======
+                background-color: fff;
+>>>>>>> 4c4fc012a7f1fa0e9692f0dba8f92c73513c8293
+                margin-top: pr(6);
+                display: flex;
+                .image {
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
                     width: pr(130);
                     height: pr(130);
                     margin-right: pr(5);
@@ -185,6 +217,29 @@ body {
                     }
                     .price {
                         color: #fc353a;
+<<<<<<< HEAD
+                        .newprice {
+                            font-size: pr(20);
+                            margin-right: pr(5);
+                        }
+                        .oldprice {
+                            color: #a8a8a8;
+                        }
+                    }
+                    .ticket {
+                        display: flex;
+                        .progress {
+                            height: pr(12);
+                            background-color: #ffb7b7;
+                            border: pr(1) solid #fc353a;
+                            margin-right: pr(5);
+                            width: pr(80);
+                            border-radius: pr(6);
+                            color: #fff;
+                            text-align: center;
+                        }
+                        .get {
+=======
                         font-size: pr(20);
                         i {
                             margin-right: pr(3);
@@ -225,6 +280,7 @@ body {
                             }
                         }
                         b {
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
                             color: #fc353a;
                         }
                     }
@@ -233,13 +289,21 @@ body {
                         width: 100%;
                         justify-content: space-between;
                         align-items: center;
+<<<<<<< HEAD
+                        .getcoupon {
+=======
                         a:first-child {
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
                             border: pr(1) dashed #e4393c;
                             color: #e4393c;
                             height: pr(24);
                             padding: pr(4);
                         }
+<<<<<<< HEAD
+                        .link {
+=======
                         a:last-child {
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
                             width: pr(58);
                             height: pr(28);
                             display: flex;
@@ -254,6 +318,8 @@ body {
             }
         }
     }
+<<<<<<< HEAD
+=======
 }
 
 .footer {
@@ -321,4 +387,5 @@ body {
             font-size: pr(20);
         }
     }
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
 }

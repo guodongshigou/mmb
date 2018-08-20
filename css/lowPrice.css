@@ -96,7 +96,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
+=======
   font-size: 0.8rem;
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
 }
 .header .title {
   flex: 1;
@@ -136,6 +139,7 @@ body {
 }
 .main .Topnav .mui-scroll-wrapper .mui-scroll a.active {
   color: #e4393c;
+<<<<<<< HEAD
 }
 .main .Topnav .mui-scroll-wrapper .mui-scroll a.active:after {
   content: '';
@@ -145,16 +149,35 @@ body {
   bottom: 0;
   left: 0;
   background-color: #ed1c24;
+=======
+<<<<<<< HEAD
+  box-shadow: 0px 0.0266666667rem 0px #ed1c24;
+=======
+  box-shadow: 0 0.6666666667rem 0 #ed1c24;
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
+>>>>>>> 4c4fc012a7f1fa0e9692f0dba8f92c73513c8293
 }
 .main .goodList ul li {
   width: 100%;
   height: 3.92rem;
   padding: 0.1866666667rem 0.2666666667rem 0.2666666667rem;
+<<<<<<< HEAD
   background-color: #fff;
+=======
+<<<<<<< HEAD
+  background-color: yellow;
+=======
+  background-color: fff;
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
+>>>>>>> 4c4fc012a7f1fa0e9692f0dba8f92c73513c8293
   margin-top: 0.16rem;
   display: flex;
 }
 .main .goodList ul li .image {
+<<<<<<< HEAD
+  background-color: yellowgreen;
+=======
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
   width: 3.4666666667rem;
   height: 3.4666666667rem;
   margin-right: 0.1333333333rem;
@@ -177,6 +200,30 @@ body {
 }
 .main .goodList ul li .info .price {
   color: #fc353a;
+<<<<<<< HEAD
+}
+.main .goodList ul li .info .price .newprice {
+  font-size: 0.5333333333rem;
+  margin-right: 0.1333333333rem;
+}
+.main .goodList ul li .info .price .oldprice {
+  color: #a8a8a8;
+}
+.main .goodList ul li .info .ticket {
+  display: flex;
+}
+.main .goodList ul li .info .ticket .progress {
+  height: 0.32rem;
+  background-color: #ffb7b7;
+  border: 0.0266666667rem solid #fc353a;
+  margin-right: 0.1333333333rem;
+  width: 2.1333333333rem;
+  border-radius: 0.16rem;
+  color: #fff;
+  text-align: center;
+}
+.main .goodList ul li .info .ticket .get {
+=======
   font-size: 0.5333333333rem;
 }
 .main .goodList ul li .info .price i {
@@ -218,6 +265,7 @@ body {
   transform: translate(-50%);
 }
 .main .goodList ul li .info .bar b {
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
   color: #fc353a;
 }
 .main .goodList ul li .info .bottom {
@@ -226,13 +274,21 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+<<<<<<< HEAD
+.main .goodList ul li .info .bottom .getcoupon {
+=======
 .main .goodList ul li .info .bottom a:first-child {
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
   border: 0.0266666667rem dashed #e4393c;
   color: #e4393c;
   height: 0.64rem;
   padding: 0.1066666667rem;
 }
+<<<<<<< HEAD
+.main .goodList ul li .info .bottom .link {
+=======
 .main .goodList ul li .info .bottom a:last-child {
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
   width: 1.5466666667rem;
   height: 0.7466666667rem;
   display: flex;
@@ -243,6 +299,8 @@ body {
   border-radius: 0.08rem;
 }
 
+<<<<<<< HEAD
+=======
 .footer {
   margin-top: 0.8533333333rem;
   height: 2.5333333333rem;
@@ -310,4 +368,5 @@ body {
   font-size: 0.5333333333rem;
 }
 
+>>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
 /*# sourceMappingURL=lowPrice.css.map */
