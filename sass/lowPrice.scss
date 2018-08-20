@@ -124,19 +124,32 @@ body {
         height: pr(40);
         background-color: #fff;
         line-height: pr(40);
-        padding: 0 pr(15);
-        position: relative;
+        padding: 0 pr(10);
         .mui-scroll-wrapper {
-            a {
-                line-height: pr(40);
-                margin-right: pr(21);
-                font-size: pr(15);
-                &:last-child {
-                    margin-right: 0;
-                }
-                &.active {
-                    color: #e4393c;
-                    box-shadow: 0 pr(25) 0 #ed1c24;
+            height: 100%;
+            .mui-scroll {
+                height: 100%;
+                a {
+                    margin-right: pr(22);
+                    font-size: pr(14);
+                    padding: pr(11) 0;
+                    position: relative;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &.active {
+                        color: #e4393c;
+                        // box-shadow: 0 pr(-3) #ed1c24 inset;
+                    }
+                    &.active:after {
+                        content: '';
+                        width: 100%;
+                        height: pr(3);
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background-color: #ed1c24;
+                    }
                 }
             }
         }
@@ -147,7 +160,7 @@ body {
                 width: 100%;
                 height: pr(147);
                 padding: pr(7) pr(10) pr(10);
-                background-color: fff;
+                background-color: #fff;
                 margin-top: pr(6);
                 display: flex;
                 .image {
@@ -197,9 +210,19 @@ body {
                             border-radius: pr(6);
                             color: #fff;
                             display: flex;
-                            justify-content: center;
                             align-items: center;
                             font-weight: bold;
+                            position: relative;
+                            em {
+                                height: 100%;
+                                background-color: #fc353a;
+                                border-radius: pr(6);
+                            }
+                            span {
+                                position: absolute;
+                                left: 50%;
+                                transform: translate(-50%);
+                            }
                         }
                         b {
                             color: #fc353a;

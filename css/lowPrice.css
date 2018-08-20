@@ -117,26 +117,40 @@ body {
   height: 1.0666666667rem;
   background-color: #fff;
   line-height: 1.0666666667rem;
-  padding: 0 0.4rem;
+  padding: 0 0.2666666667rem;
+}
+.main .Topnav .mui-scroll-wrapper {
+  height: 100%;
+}
+.main .Topnav .mui-scroll-wrapper .mui-scroll {
+  height: 100%;
+}
+.main .Topnav .mui-scroll-wrapper .mui-scroll a {
+  margin-right: 0.5866666667rem;
+  font-size: 0.3733333333rem;
+  padding: 0.2933333333rem 0;
   position: relative;
 }
-.main .Topnav .mui-scroll-wrapper a {
-  line-height: 1.0666666667rem;
-  margin-right: 0.56rem;
-  font-size: 0.4rem;
-}
-.main .Topnav .mui-scroll-wrapper a:last-child {
+.main .Topnav .mui-scroll-wrapper .mui-scroll a:last-child {
   margin-right: 0;
 }
-.main .Topnav .mui-scroll-wrapper a.active {
+.main .Topnav .mui-scroll-wrapper .mui-scroll a.active {
   color: #e4393c;
-  box-shadow: 0 0.6666666667rem 0 #ed1c24;
+}
+.main .Topnav .mui-scroll-wrapper .mui-scroll a.active:after {
+  content: '';
+  width: 100%;
+  height: 0.08rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ed1c24;
 }
 .main .goodList ul li {
   width: 100%;
   height: 3.92rem;
   padding: 0.1866666667rem 0.2666666667rem 0.2666666667rem;
-  background-color: fff;
+  background-color: #fff;
   margin-top: 0.16rem;
   display: flex;
 }
@@ -189,9 +203,19 @@ body {
   border-radius: 0.16rem;
   color: #fff;
   display: flex;
-  justify-content: center;
   align-items: center;
   font-weight: bold;
+  position: relative;
+}
+.main .goodList ul li .info .bar i em {
+  height: 100%;
+  background-color: #fc353a;
+  border-radius: 0.16rem;
+}
+.main .goodList ul li .info .bar i span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 .main .goodList ul li .info .bar b {
   color: #fc353a;
