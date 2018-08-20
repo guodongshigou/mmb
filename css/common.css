@@ -115,19 +115,12 @@ body {
   height: 100%;
   background-color: #f1f1f1;
   border-radius: 0.4rem;
-<<<<<<< HEAD
-  padding-left: 0.48rem; }
-.container .searchbar .inner .search::placeholder {
-  color: #929292;
-  font-size: 0.3733333333rem; }
-=======
   padding-left: 0.48rem;
 }
-.container .searchbar .inner .search ::placeholder {
+.container .searchbar .inner .search::placeholder {
   color: #929292;
-  font-size: 0.4266666667rem;
+  font-size: 0.3733333333rem;
 }
->>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
 .container .searchbar .inner .searchbtn {
   width: 1.68rem;
   height: 100%;
@@ -137,21 +130,15 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-<<<<<<< HEAD
   font-size: 0.3733333333rem;
   display: flex;
   justify-content: center;
-  align-items: center; }
-.container .main {
-  flex: 1;
-  min-height: 13.3333333333rem; }
-=======
-  font-size: 0.4266666667rem;
+  align-items: center;
 }
 .container .main {
   flex: 1;
+  min-height: 13.3333333333rem;
 }
->>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
 .container .footer {
   height: 2.5333333333rem;
   background-color: #efefef;

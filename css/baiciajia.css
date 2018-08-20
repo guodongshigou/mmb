@@ -63,7 +63,7 @@ button {
 }
 
 body {
-  font: 0.32rem/100% "微软雅黑";
+  font: 12px/100% '微软雅黑';
   background-color: #ffffff;
 }
 
@@ -77,6 +77,116 @@ body {
 
 .clearfix {
   *zoom: 1;
+}
+
+.container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 1.3333333333rem;
+  background-color: #ff841d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.1866666667rem 0 0.4533333333rem;
+}
+.container .header .left img {
+  height: 0.6666666667rem;
+}
+.container .header .right img {
+  height: 0.9333333333rem;
+}
+.container .searchbar {
+  height: 1.36rem;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .searchbar .inner {
+  width: 9.4666666667rem;
+  height: 0.8rem;
+  position: relative;
+}
+.container .searchbar .inner .search {
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  border-radius: 0.4rem;
+  padding-left: 0.48rem;
+}
+.container .searchbar .inner .search::placeholder {
+  color: #929292;
+  font-size: 0.3733333333rem;
+}
+.container .searchbar .inner .searchbtn {
+  width: 1.68rem;
+  height: 100%;
+  border-radius: 0.4rem;
+  background-color: #ff841d;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.3733333333rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main {
+  flex: 1;
+  min-height: 13.3333333333rem;
+}
+.container .footer {
+  height: 2.5333333333rem;
+  background-color: #efefef;
+  border-top: 1px solid #c4c4c4;
+  display: flex;
+  flex-direction: column;
+}
+.container .footer .bar {
+  height: 0.9066666667rem;
+  border-bottom: 1px solid #c4c4c4;
+  display: flex;
+}
+.container .footer .bar a {
+  font-size: 0.3466666667rem;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .footer .bar .login {
+  width: 2.9866666667rem;
+  border-right: 1px solid #c4c4c4;
+}
+.container .footer .bar .register {
+  width: 2.96rem;
+  border-right: 1px solid #c4c4c4;
+}
+.container .footer .bar .top {
+  flex: 1;
+}
+.container .footer .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .footer .content .title {
+  font-size: 0.32rem;
+  color: #666666;
+  margin-bottom: 0.1866666667rem;
+}
+.container .footer .content .title .app {
+  color: #ff0000;
+}
+.container .footer .content .web {
+  font-size: 0.2666666667rem;
+  color: #666666;
 }
 
 body {
@@ -96,10 +206,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-=======
   font-size: 0.8rem;
->>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
 }
 .header .title {
   flex: 1;
@@ -120,64 +227,30 @@ body {
   height: 1.0666666667rem;
   background-color: #fff;
   line-height: 1.0666666667rem;
-  padding: 0 0.2666666667rem;
-}
-.main .Topnav .mui-scroll-wrapper {
-  height: 100%;
-}
-.main .Topnav .mui-scroll-wrapper .mui-scroll {
-  height: 100%;
-}
-.main .Topnav .mui-scroll-wrapper .mui-scroll a {
-  margin-right: 0.5866666667rem;
-  font-size: 0.3733333333rem;
-  padding: 0.2933333333rem 0;
+  padding: 0 0.4rem;
   position: relative;
 }
-.main .Topnav .mui-scroll-wrapper .mui-scroll a:last-child {
+.main .Topnav .mui-scroll-wrapper a {
+  line-height: 1.0666666667rem;
+  margin-right: 0.56rem;
+  font-size: 0.4rem;
+}
+.main .Topnav .mui-scroll-wrapper a:last-child {
   margin-right: 0;
 }
-.main .Topnav .mui-scroll-wrapper .mui-scroll a.active {
+.main .Topnav .mui-scroll-wrapper a.active {
   color: #e4393c;
-<<<<<<< HEAD
-}
-.main .Topnav .mui-scroll-wrapper .mui-scroll a.active:after {
-  content: '';
-  width: 100%;
-  height: 0.08rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #ed1c24;
-=======
-<<<<<<< HEAD
-  box-shadow: 0px 0.0266666667rem 0px #ed1c24;
-=======
   box-shadow: 0 0.6666666667rem 0 #ed1c24;
->>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
->>>>>>> 4c4fc012a7f1fa0e9692f0dba8f92c73513c8293
 }
 .main .goodList ul li {
   width: 100%;
   height: 3.92rem;
   padding: 0.1866666667rem 0.2666666667rem 0.2666666667rem;
-<<<<<<< HEAD
   background-color: #fff;
-=======
-<<<<<<< HEAD
-  background-color: yellow;
-=======
-  background-color: fff;
->>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
->>>>>>> 4c4fc012a7f1fa0e9692f0dba8f92c73513c8293
   margin-top: 0.16rem;
   display: flex;
 }
 .main .goodList ul li .image {
-<<<<<<< HEAD
-  background-color: yellowgreen;
-=======
->>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
   width: 3.4666666667rem;
   height: 3.4666666667rem;
   margin-right: 0.1333333333rem;
@@ -200,30 +273,6 @@ body {
 }
 .main .goodList ul li .info .price {
   color: #fc353a;
-<<<<<<< HEAD
-}
-.main .goodList ul li .info .price .newprice {
-  font-size: 0.5333333333rem;
-  margin-right: 0.1333333333rem;
-}
-.main .goodList ul li .info .price .oldprice {
-  color: #a8a8a8;
-}
-.main .goodList ul li .info .ticket {
-  display: flex;
-}
-.main .goodList ul li .info .ticket .progress {
-  height: 0.32rem;
-  background-color: #ffb7b7;
-  border: 0.0266666667rem solid #fc353a;
-  margin-right: 0.1333333333rem;
-  width: 2.1333333333rem;
-  border-radius: 0.16rem;
-  color: #fff;
-  text-align: center;
-}
-.main .goodList ul li .info .ticket .get {
-=======
   font-size: 0.5333333333rem;
 }
 .main .goodList ul li .info .price i {
@@ -250,22 +299,11 @@ body {
   border-radius: 0.16rem;
   color: #fff;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-weight: bold;
-  position: relative;
-}
-.main .goodList ul li .info .bar i em {
-  height: 100%;
-  background-color: #fc353a;
-  border-radius: 0.16rem;
-}
-.main .goodList ul li .info .bar i span {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
 }
 .main .goodList ul li .info .bar b {
->>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
   color: #fc353a;
 }
 .main .goodList ul li .info .bottom {
@@ -274,21 +312,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-<<<<<<< HEAD
-.main .goodList ul li .info .bottom .getcoupon {
-=======
 .main .goodList ul li .info .bottom a:first-child {
->>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
   border: 0.0266666667rem dashed #e4393c;
   color: #e4393c;
   height: 0.64rem;
   padding: 0.1066666667rem;
 }
-<<<<<<< HEAD
-.main .goodList ul li .info .bottom .link {
-=======
 .main .goodList ul li .info .bottom a:last-child {
->>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
   width: 1.5466666667rem;
   height: 0.7466666667rem;
   display: flex;
@@ -299,59 +329,7 @@ body {
   border-radius: 0.08rem;
 }
 
-<<<<<<< HEAD
-=======
-.footer {
-  margin-top: 0.8533333333rem;
-  height: 2.5333333333rem;
-  background-color: #efefef;
-  border-top: 0.0266666667rem solid #c4c4c4;
-  display: flex;
-  flex-direction: column;
-}
-.footer .bar {
-  height: 0.9066666667rem;
-  border-bottom: 0.0266666667rem solid #c4c4c4;
-  display: flex;
-}
-.footer .bar a {
-  font-size: 0.3466666667rem;
-  color: #757575;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.footer .bar .login {
-  width: 2.9866666667rem;
-  border-right: 0.0266666667rem solid #c4c4c4;
-}
-.footer .bar .register {
-  width: 2.96rem;
-  border-right: 0.0266666667rem solid #c4c4c4;
-}
-.footer .bar .top {
-  flex: 1;
-}
-.footer .content {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.footer .content .title {
-  font-size: 0.32rem;
-  color: #666666;
-  margin-bottom: 0.1866666667rem;
-}
-.footer .content .title .app {
-  color: #ff0000;
-}
-.footer .content .web {
-  font-size: 0.2666666667rem;
-  color: #666666;
-}
-.footer .fixed {
+.fixed {
   width: 1.0666666667rem;
   height: 1.0666666667rem;
   position: fixed;
@@ -363,10 +341,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-.footer .fixed i {
+.fixed i {
   color: #fff;
   font-size: 0.5333333333rem;
 }
 
->>>>>>> 12ea3259b169bd1de6f0db865ae4194b6bba0a3d
-/*# sourceMappingURL=lowPrice.css.map */
+/*# sourceMappingURL=baiciajia.css.map */
