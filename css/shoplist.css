@@ -190,136 +190,54 @@ body {
 }
 
 .main {
-  background-color: #fff;
-}
-.main .xinxi {
-  padding: 0rem 0.2666666667rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.main .xinxi .productName {
-  padding-top: 0.5333333333rem;
-  width: 100%;
-  font-size: 0.4266666667rem;
-  color: #000;
-}
-.main .xinxi .productPrice {
-  width: 100%;
-  font-size: 0.3733333333rem;
-  color: orangered;
-}
-.main .xinxi span {
-  font-size: 0.2666666667rem;
-  line-height: 20px;
-  color: #5c5b5b;
-}
-.main .chanpin {
-  display: flex;
-  width: 100%;
-}
-.main .chanpin p {
-  padding: 0.2666666667rem;
-  flex: 2;
-}
-.main .chanpin div {
   flex: 1;
-  padding: 0.2666666667rem;
-}
-.main .chanpin div img {
-  width: 100%;
-}
-.main .chanpintu {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5333333333rem;
-}
-.main .chanpintu img {
-  height: 5.3333333333rem;
-}
-.main .goumai {
-  display: flex;
-  padding: 0.2666666667rem;
-  justify-content: center;
-  align-items: center;
-}
-.main .goumai div {
-  width: 100%;
-  height: 0.8rem;
-  background-color: orange;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  line-height: 0.8rem;
-}
-.main .goumai div p {
-  color: #fff;
-}
-.main .weixin {
-  padding: 0.2666666667rem;
-}
-.main .weixin img {
-  width: 100%;
-}
-.main .pinlun {
-  padding: 0.2666666667rem;
-  width: 100%;
-}
-.main .pinlun .shuru {
-  display: flex;
-  align-items: flex-start;
   flex-direction: column;
 }
-.main .pinlun .shuru p {
-  font-size: 0.4266666667rem;
-  color: #000;
-}
-.main .pinlun .shuru .wenzi {
-  height: 5.3333333333rem;
-  width: 100%;
-  border: 0.0266666667rem solid #ccc;
-}
-.main .pinlun .shuru button {
-  background-color: #fcb839;
-  color: #fff;
-  align-self: flex-end;
-}
-.main .pinlun .fabu p {
-  color: #0f0f0f;
-  padding-top: 0.2666666667rem;
-  font-size: 0.4266666667rem;
-}
-.main .pinlun .fabu .zhiliao {
+.main .big {
   display: flex;
+  height: 0.8rem;
+  justify-content: space-between;
 }
-.main .pinlun .fabu .zhiliao .a {
+.main .big .title {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  margin-left: 0.2666666667rem;
+}
+.main .big .title a {
+  font-size: 0.4rem;
+}
+.main .big button {
+  margin-right: 0.2666666667rem;
+  margin-top: 0.08rem;
+}
+.main .big button a {
+  line-height: 0.4rem;
+  height: 0.4rem;
+  text-align: center;
+}
+.main .productinfo .big_list {
   display: flex;
-  width: 50%;
-  border-radius: 50%;
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
 }
-.main .pinlun .fabu .zhiliao .a .aa {
-  width: 50%;
+.main .productinfo .big_list .left {
+  width: 25%;
+  padding: 10px;
 }
-.main .pinlun .fabu .zhiliao .a .aa .yonhu {
-  color: #2d76d6;
-}
-.main .pinlun .fabu .zhiliao .a .tupian {
-  width: 50%;
-  padding: 0.2666666667rem;
-}
-.main .pinlun .fabu .zhiliao .a .tupian img {
+.main .productinfo .big_list .left img {
   width: 100%;
 }
-.main .pinlun .fabu .zhiliao .b {
-  width: 50%;
+.main .productinfo .big_list .right {
+  padding: 10px;
+  width: 75%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 40px;
 }
-.main .pinlun .fabu .zhiliao .b p {
-  font-size: 0.4266666667rem;
-  color: #6e6d6d;
-  padding-right: 0.2666666667rem;
+.main .productinfo .big_list .right .price {
+  color: red;
 }
 
-/*# sourceMappingURL=xiangqing.css.map */
+/*# sourceMappingURL=shoplist.css.map */

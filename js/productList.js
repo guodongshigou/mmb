@@ -27,20 +27,109 @@ $(function(){
         //3.2 记录当前页数
         currentPage = pageid;
 
+
         //3.3 发送请求
         $.ajax({
             url: "http://mmb.ittun.com/api/getproductlist",
             data: {categoryid:categoryid,pageid:pageid},
             success: function(res){
+                 
+                var price;
+                var brandName;
 
                 //7.设置侧栏品牌的点击事件
-                // $("#menu .types").on("click","span",function(){
-                //     $(this).addClass("active").parent().siblings().find("span").removeClass("active");
-                //     var brandName = $(this).html();
-                //     for(var i = 0; i < res.result.length; i++){
-                //         if(res.result[i].)
-                //     }
-                // });
+                $("#menu .types").on("click","span",function(){
+                    //7.1 声明空对象用于接收筛选的值
+                    var selectedRes = {};
+                    //7.2 为对象设置result属性存放筛选出来的数据
+                    selectedRes.result = [];
+                    //7.3 点击的时候改变颜色
+                    $(this).addClass("active").parent().siblings().find("span").removeClass("active");
+                    
+                    if($(this).html()=="全部品牌" || $(this).html() =="全部价格"){
+                        getItem(categoryId,1);
+                        //7.9 调用关闭侧栏的函数
+                        $("#my-button").click();
+                        return;
+                    };
+                    
+                    //获取价格
+                    if($(this).hasClass("price")){
+                        price = $(this).html();
+                        console.log(brandName);
+                         //7.5 分解价格
+                        if (price != "全部价格") {
+                         var min = parseInt(price.split("-")[0]);
+                         var max = parseInt(price.split("-")[1]);
+
+                         for (var i = 0; i < res.result.length; i++) {
+                             var currentPrice = parseInt(res.result[i].productPrice.slice(1));
+                             if (currentPrice <= max && currentPrice >= min) {
+                                 selectedRes.result.push(res.result[i]);
+                             }
+                        }
+
+                        //      if(brandName){
+                        //          var arr = selectedRes.result;
+                        //          selectedRes.result = [];
+                        //          for (var i = 0; i < arr.length; i++) {
+                        //             if (arr[i].brandName == brandName) {
+                        //                 selectedRes.result.push(arr[i]);
+                        //             }
+                        //      }
+                        //      console.log(selectedRes.result);
+                        //  };
+                         
+                        }
+                    }else {
+                        //7.4 获取选择的品牌名
+                        brandName = $(this).html();
+                        console.log(price);
+                        //7.5 从响应体中筛选出对应的数据,添加至声明的对象中
+                        for (var i = 0; i < res.result.length; i++) {
+                            if (res.result[i].brandName == brandName) {
+                                selectedRes.result.push(res.result[i]);
+                            };
+                            // if(price){
+                            //     var arr = selectedRes.result;
+                            //     selectedRes.result = [];
+                            //     var min = parseInt(price.split("-")[0]);
+                            //     var max = parseInt(price.split("-")[1]);
+       
+                            //     for (var i = 0; i < arr.length; i++) {
+                            //         var currentPrice = parseInt(arr[i].productPrice.slice(1));
+                            //         if (currentPrice <= max && currentPrice >= min) {
+                            //             selectedRes.result.push(arr[i]);
+                            //         }
+                            //    }
+                            // }
+                        };
+                    }
+                     
+                    //7.6 渲染模板
+                    var html = template("itemlist",selectedRes);
+                    $(".itemlist").html(html);
+
+                     //7.7 计算总页数
+                    totalpage = Math.ceil(selectedRes.result.length/res.pagesize);
+
+                    //当为第一页的时候才加载下拉框模板
+                    if(currentPage == 1){
+                    //7.8  渲染分页模板
+                        var pagehtml = template("pagenum",{totalpage:totalpage});
+                        $(".current").html(pagehtml);
+                    }
+
+                    //将请求页的下拉框对应的option设置为selected,以便下拉框显示内容,用排除法将其他的设置为未被选中
+                    $(".pageSelect").eq(pageid-1).attr("selected",true).siblings().attr("selected",false);
+
+                    //返回顶部
+                    document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+                    //7.9 调用关闭侧栏的函数
+                   $("#my-button").click();
+
+                });
 
 
 
@@ -170,8 +259,8 @@ $(function(){
         API.close();
     });
 
-    $("#menu .types").on("click","span",function(){
-        $(this).addClass("active").parent().siblings().find("span").removeClass("active");
-    });
+    // $("#menu .types").on("click","span",function(){
+    //     $(this).addClass("active").parent().siblings().find("span").removeClass("active");
+    // });
     
 })

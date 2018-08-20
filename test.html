@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="./lib/mui/dist/css/mui.min.css">
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a id="back" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 id="title" class="mui-title">下拉刷新和上拉加载更多</h1>
+    </header>
+    <div class="mui-content">
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+        <li>你好啊</li>
+    </div>
+</body>
+<script src="./lib/mui/dist/js/mui.min.js"></script>
+<script src="./lib/jquery/jquery3.min.js"></script>
+<script type="text/javascript">
+    mui.init({
+        pullRefresh: {
+            container: ".mui-content",//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+            up: {
+                height: 50,//可选.默认50.触发上拉加载拖动距离
+                auto: true,//可选,默认false.自动上拉加载一次
+                contentrefresh: "正在加载...",
+                contentnomore: '没有更多数据了',
+                callback: function(){
+                    for(var i =0;i<20;i++) {
+                        $(".mui-content").append("<li>你好</li>");
+                    }
+                    
+                    this.endPullupToRefresh(true);
+                } //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+    }
+        }
+    });
+</script>
+
+</html>

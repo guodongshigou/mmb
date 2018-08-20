@@ -113,6 +113,9 @@ body {
   width: 0.88rem;
 }
 
+.main {
+  margin-bottom: 0.5333333333rem;
+}
 .main .Topnav {
   height: 1.0666666667rem;
   background-color: #fff;

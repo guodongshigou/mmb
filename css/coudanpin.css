@@ -334,4 +334,43 @@ body {
   font-size: 0.4266666667rem;
 }
 
+.menu {
+  width: 30px;
+  height: 140px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  border-radius: 30px;
+}
+.menu .top {
+  height: 90px;
+}
+.menu .top > i {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  margin-top: 5px;
+  z-index: -1;
+}
+.menu .bottom {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
 /*# sourceMappingURL=coudanpin.css.map */
