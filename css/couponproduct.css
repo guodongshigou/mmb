@@ -1,93 +1,55 @@
 @charset "UTF-8";
-p,
-div,
-span,
-img,
-a,
-input,
-ol,
-ul,
-li,
-i,
-em,
-strong,
-h1,
-h2,
-h3,
-h4,
-body,
-del {
+p, div, span, img, a, input, ol, ul, li, i, em, strong, h1, h2, h3, h4, body, del {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 a {
   text-decoration: none;
-  color: #5c6066;
-}
+  color: #5c6066; }
 
-ol,
-ul,
-li {
-  list-style: none;
-}
+ol, ul, li {
+  list-style: none; }
 
 img {
   border: 0 none;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 input {
   outline: 0 none;
-  border: 0 none;
-}
+  border: 0 none; }
 
-i,
-em {
-  font-style: normal;
-}
+i, em {
+  font-style: normal; }
 
-strong,
-h1,
-h2,
-h3,
-h4 {
-  font-weight: normal;
-}
+strong, h1, h2, h3, h4 {
+  font-weight: normal; }
 
 button {
   outline: 0 none;
   border: 0 none;
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 body {
-  font: 14px/100% '微软雅黑';
-}
+  font: 14px/100% '微软雅黑'; }
 
-html,
-body {
-  height: 100%;
-}
+html, body {
+  height: 100%; }
 
 .clearfix::after {
   content: "";
   display: block;
   clear: both;
   visibility: hidden;
-  height: 0;
-}
+  height: 0; }
 
 .clearfix {
-  *zoom: 1;
-}
+  *zoom: 1; }
 
 .container {
   height: 100%;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 .container .header {
   position: fixed;
   z-index: 100;
@@ -97,87 +59,70 @@ body {
   padding: 0rem 0.2666666667rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
+  align-items: center; }
 .container .header .backbutton {
-  color: #fff;
-}
+  color: #fff; }
 .container .header .title {
-  color: #fff;
-}
+  color: #fff; }
 .container .header .download img {
-  height: 0.9333333333rem;
-}
+  height: 0.9333333333rem; }
 .container .main {
   flex: 1;
   background-color: #fff;
   position: relative;
   margin-top: 1.2rem;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 .container .main .mui-scroll-wrapper .mui-scroll .descript {
   flex-basis: 0.6933333333rem;
   width: 100%;
   display: block;
   line-height: 0.6933333333rem;
   text-align: center;
-  color: #999;
-}
+  color: #999; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts {
   flex: 1;
   width: 100%;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts .couponproduct {
   height: 4.1333333333rem;
   display: flex;
   padding-top: 0.16rem;
   padding-bottom: 0.1066666667rem;
-  border-bottom: 1px solid #ccc;
-}
+  border-bottom: 1px solid #ccc; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts .couponproduct .left {
   flex: 1;
-  padding: 0rem 0.1333333333rem;
-}
+  padding: 0rem 0.1333333333rem; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts .couponproduct .left img {
-  width: 100%;
-}
+  width: 100%; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts .couponproduct .right {
   flex: 2;
   display: flex;
-  padding: 0rem 0.08rem;
-}
+  padding: 0rem 0.08rem; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts .couponproduct .right .detail {
   flex: 1;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts .couponproduct .right .detail .more {
   flex: 1;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts .couponproduct .right .detail .more .title {
-  line-height: 0.5333333333rem;
-}
+  line-height: 0.5333333333rem; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts .couponproduct .right .detail .more .price {
-  padding: 0.16rem 0rem;
-}
+  padding: 0.16rem 0rem; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts .couponproduct .right .detail .time {
   height: 0.9333333333rem;
   line-height: 0.9333333333rem;
-  color: #ee7700;
-}
+  color: #ee7700; }
 .container .main .mui-scroll-wrapper .mui-scroll .couponproducts .couponproduct .right .icon {
   flex-basis: 0.5333333333rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.4266666667rem;
-  color: #ccc;
-}
+  color: #ccc; }
 
 .bg {
   display: none;
@@ -187,8 +132,7 @@ body {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 101;
-}
+  z-index: 101; }
 
 .lb {
   display: none;
@@ -197,15 +141,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  z-index: 102;
-}
+  z-index: 102; }
 .lb .swiper-container {
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 .lb .swiper-container .swiper-slide {
   text-align: center;
-  font-size: 18px;
-}
+  font-size: 18px; }
 
 /*# sourceMappingURL=couponproduct.css.map */
