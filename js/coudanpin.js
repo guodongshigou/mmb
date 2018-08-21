@@ -48,8 +48,6 @@ $(function () {
     //调用方法,初始渲染默认的数据
     renderPro(data);
 
-
-
     //列表交互效果
     /**
      * ele0:被点击的对象
@@ -116,9 +114,8 @@ $(function () {
         renderPro(data);
     });
 
-    //悬浮事件
-    $(".bottom").click(function(){
-        $(".top")
-    });
+    $(".main").on("click",".gotogether",function(){
+        location = "https://www.taobao.com/";
+    })
 
 });

@@ -1,3 +1,4 @@
+$("head title").html("慢慢买项目实战");
 $(function () {
     //设置rem大小
     document.querySelector('html').style.fontSize = screen.width / 10 + 'px';

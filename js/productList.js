@@ -37,6 +37,9 @@ $(function(){
                 var price;
                 var brandName;
 
+                console.log(res);
+                
+
                 //7.设置侧栏品牌的点击事件
                 $("#menu .types").on("click","span",function(){
                     //7.1 声明空对象用于接收筛选的值

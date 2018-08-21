@@ -15,9 +15,14 @@ $(function () {
 
 
     var href = location.href;
-    href = href.split('?')[1];
+    if(href.indexOf("?") != -1) {
+        href = href.split('?')[1];
+    }else {
+        href = "pageid=1";
+    }
     href = Number(href.split('=')[1]);
-    console.log(href);
+    
+    // console.log(href);
 
     getdiscountproduct(href);
 

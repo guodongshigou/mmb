@@ -90,7 +90,7 @@
     <!-- 首页nav模板引擎 -->
     <script id="getmenu" type="text/html">
         {{ each list value i }}
-        <a href="{{ value.titlehref }}" class="{{ if i> 7 }}active{{/if}}">
+        <a href="{{if i==1}} moneyctrl1.html {{ else}} {{value.titlehref }}  {{/if}}" class="{{ if i> 7 }}active{{/if}}" >
                 {{#value.img }}
                 <span class="navName">{{ value.name }}</span>
         </a>
