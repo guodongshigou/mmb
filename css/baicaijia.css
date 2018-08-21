@@ -140,7 +140,6 @@ body {
   border-radius: 0.16rem;
   color: #fff;
   display: flex;
-  justify-content: center;
   align-items: center;
   font-weight: bold; }
 .main .goodList ul li .info .bar b {

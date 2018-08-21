@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/inlanddiscount.css">
+    <script src="./lib/mui/dist/js/mui.min.js"></script>
     <script src="./lib/jquery/jquery3.min.js"></script>
     <script>
         //设置rem
         document.documentElement.style.fontSize = window.screen.width / 10 + "px";
     </script>
-    <script src="./js/zhekou.js"></script>
-    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/list.css">
-    <link rel="stylesheet" href="./css/zhekou.css">
+    <script src="./js/common.js"></script>
+
+    <script src="./js/inlanddiscount.js"></script>
+
     <script src="./lib/artTemplate/template-web.js"></script>
 </head>
 
 <body>
     <div class="container">
         <!-- 头部通用部分 -->
-        <div class="header">
+        <div class="header" id="header">
             <a class="left" href="index.html">
                 <img src="../mmb/images/title.png" alt="">
             </a>
@@ -48,7 +52,7 @@
             <div class="bar">
                 <a class="login" href="#">登录</a>
                 <a class="register" href="#">注册</a>
-                <a class="top" href="#">
+                <a class="top" href="#header">
                     <span class="fa fa-arrow-up"></span>返回顶部</a>
             </div>
             <div class="content">
@@ -63,7 +67,7 @@
 
     <script id="getland" type="text/html">
         {{ each list v i }}
-            <div class="chanping" data-id="{{v.id}}">   
+            <div class="chanping" data-id="{{v.productId}}">   
                 {{#v.productImg}}
                 <p class="a">{{v.productName}}</p>
                 <p class="b">{{v.productPrice}}</p> 
@@ -75,10 +79,6 @@
         {{ /each}}
 
     </script>
-
-
-
-
 
 </body>
 

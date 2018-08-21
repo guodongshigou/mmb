@@ -98,6 +98,9 @@
                     width: 100%;
                 }
              }
+             .form{
+                 margin-top: pr(5);
+             }
 
         .pinlun {
             padding: pr(10);
@@ -122,8 +125,11 @@
                     color: #fff;  
                     align-self: flex-end; 
                 }
-                
 
+            }
+
+            #newcomment {
+                margin-top: pr(10);
             }
 
 
@@ -138,12 +144,13 @@
                 }
 
                 .zhiliao {
-
+                    width: 100%;
                     display: flex;
                     .a {
+                        width: 100%;
                         display: flex;
-                        width: 50%;
                         border-radius:50%;
+                        justify-content: space-between;
                         .aa {
                             width: 50%;
                             .yonhu {
@@ -152,10 +159,9 @@
                            
                         }
                         .tupian{
-                            width: 50%;
                             padding: pr(10);
                             img {
-                                width: 100%;
+                                width: pr(50);
                             } 
                         }
                         
@@ -177,8 +183,13 @@
 
                 
             }
+            .yonhu {
+                margin: 0;
+            }
         }
              
+
+        
              
 
 

@@ -40,6 +40,7 @@
 
             </ul>
         </div>
+
     </div>
     <div class="footer">
         <div class="bar">
@@ -60,6 +61,7 @@
             <i class="fa fa-arrow-up"></i>
         </a>
     </div>
+
 </body>
 
 </html>
@@ -70,7 +72,7 @@
 </script>
 
 <script type="text/html" id="productTpl">
-    {{ each list value }}
+    {{ each list value key}} {{ if(key > 1) }}
     <li>
         <div class="image">
             {{#value.productImg}}
@@ -86,5 +88,5 @@
             </p>
         </div>
     </li>
-    {{ /each }}
+    {{ /if }} {{ /each }}
 </script>

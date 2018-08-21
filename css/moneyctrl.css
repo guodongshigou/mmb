@@ -216,6 +216,7 @@ body {
 .main .pinlun .fabu .zhiliao {
   display: flex; }
 .main .pinlun .fabu .zhiliao .a {
+  width: 100%;
   display: flex;
   width: 50%;
   border-radius: 50%; }

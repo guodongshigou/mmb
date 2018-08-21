@@ -27,7 +27,7 @@ $(function(){
             $(".nav a:nth-child(n+9)").removeClass("activeout");
             $(".nav a:nth-child(n+9)").addClass("active")
         }
-        return flase;
+        return false;
     })
 
 
@@ -74,7 +74,7 @@ $(function(){
     $(".productLists").on("click","li",function(){
         // 获取该商品的自定义id
         // var productId = $(this).data("id");
-        window.location.href = "./inlanddiscount.html?productId="+$(this).data("id");
+        window.location.href = "./moneyctrl.html?productId="+$(this).data("id");
     })
 
     // 返回顶部

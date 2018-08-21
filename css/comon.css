@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  display: block; }
+
+input {
+  outline: none;
+  border: none; }
+
+html, body {
+  height: 100%; }
+
+.container {
+  display: flex;
+  flex-direction: column; }
+.container .header {
+  width: 100%;
+  height: 2.6666666667rem;
+  color: #ffeef0;
+  background-color: #ff841d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+.container .main ul li a {
+  display: flex;
+  padding-top: -1.3333333333rem;
+  height: 5.3333333333rem;
+  margin-bottom: 0.4rem;
+  color: block; }
+.container .main ul li a .left {
+  width: 5.3333333333rem;
+  height: 5.3333333333rem; }
+.container .main ul li a .left img {
+  width: 5.3333333333rem;
+  height: 5.3333333333rem; }
+.container .main ul li a .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 10px; }
+.container .main ul li a .right .slgan {
+  padding: 0.2666666667rem 1.0666666667rem 0rem 0.2666666667rem;
+  font-size: 1.0666666667rem; }
+.container .main ul li a .right .slgan span {
+  color: orange; }
+.container .main ul li a .right .hint {
+  margin-left: 0.4rem;
+  font-size: 0.32rem;
+  color: #999;
+  padding-bottom: 0.2666666667rem; }
+.container .main ul li a .right .hint .info {
+  font-size: 0.8rem; }
+.container .main ul li a .right .hint .informetion {
+  float: right;
+  font-size: 0.9333333333rem;
+  padding-right: 0.1333333333rem; }
+.container .mmb_page {
+  display: flex; }
+.container .footer {
+  width: 100%;
+  background-color: #fff; }
+.container .footer .foot_top {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  align-items: center; }
+.container .footer .foot_top a {
+  width: 33.3333%;
+  height: 2.1333333333rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black; }
+.container .footer .foot_top a:nth-child(2) {
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc; }
+.container .footer .foot_top .back {
+  display: flex;
+  justify-content: space-around; }
+.container .footer .foot_bottom {
+  text-align: center;
+  padding-top: 0.4rem; }
+.container .footer .foot_bottom a:nth-child(1) {
+  color: red; }
+.container .footer .foot_bottom a:nth-child(2) {
+  color: black; }
+
+/*# sourceMappingURL=comon.css.map */
