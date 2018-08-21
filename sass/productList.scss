@@ -213,12 +213,19 @@
             .types {
                 display: flex;
                 flex-wrap: wrap;
+
     
                 a {
                     flex: 32%;
                     
                     height: pr(34);
                     padding: pr(3) pr(2);
+
+
+                    &.hiddenDiv {
+                        height: 0;
+                        padding: 0;
+                    }
                    
                     span {
                         width: 100%;
@@ -240,6 +247,8 @@
                 &::after {
                     border-bottom-width: 0;
                 }
+
+                
             }
         }
 }
