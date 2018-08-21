@@ -45,7 +45,7 @@ $(function(){
                     selectedRes.result = [];
                     //7.3 点击的时候改变颜色
                     $(this).addClass("active").parent().siblings().find("span").removeClass("active");
-                    
+
                     if($(this).html()=="全部品牌" || $(this).html() =="全部价格"){
                         getItem(categoryId,1);
                         //7.9 调用关闭侧栏的函数
@@ -56,54 +56,56 @@ $(function(){
                     //获取价格
                     if($(this).hasClass("price")){
                         price = $(this).html();
-                        console.log(brandName);
+                        //console.log(brandName);
                          //7.5 分解价格
                         if (price != "全部价格") {
-                         var min = parseInt(price.split("-")[0]);
-                         var max = parseInt(price.split("-")[1]);
-
-                         for (var i = 0; i < res.result.length; i++) {
-                             var currentPrice = parseInt(res.result[i].productPrice.slice(1));
-                             if (currentPrice <= max && currentPrice >= min) {
-                                 selectedRes.result.push(res.result[i]);
-                             }
-                        }
-
-                        //      if(brandName){
-                        //          var arr = selectedRes.result;
-                        //          selectedRes.result = [];
-                        //          for (var i = 0; i < arr.length; i++) {
-                        //             if (arr[i].brandName == brandName) {
-                        //                 selectedRes.result.push(arr[i]);
-                        //             }
-                        //      }
-                        //      console.log(selectedRes.result);
-                        //  };
+                            //获取最小值和最大值
+                            var min = parseInt(price.split("-")[0]);
+                            var max = parseInt(price.split("-")[1]);
+                            //将响应体中符合要求的值存放进新的对象中
+                            for (var i = 0; i < res.result.length; i++) {
+                                var currentPrice = parseInt(res.result[i].productPrice.slice(1));
+                                if (currentPrice <= max && currentPrice >= min) {
+                                    selectedRes.result.push(res.result[i]);
+                                }
+                            };
+                            //如果有品牌名,代表已经筛选
+                            if (brandName) {
+                                var arr = selectedRes.result;
+                                selectedRes.result = [];
+                                for (var i = 0; i < arr.length; i++) {
+                                    if (arr[i].brandName == brandName) {
+                                        selectedRes.result.push(arr[i]);
+                                    }
+                                }
+                                console.log(selectedRes.result);
+                            };
                          
                         }
                     }else {
                         //7.4 获取选择的品牌名
                         brandName = $(this).html();
-                        console.log(price);
+                        //console.log(price);
                         //7.5 从响应体中筛选出对应的数据,添加至声明的对象中
                         for (var i = 0; i < res.result.length; i++) {
                             if (res.result[i].brandName == brandName) {
                                 selectedRes.result.push(res.result[i]);
-                            };
-                            // if(price){
-                            //     var arr = selectedRes.result;
-                            //     selectedRes.result = [];
-                            //     var min = parseInt(price.split("-")[0]);
-                            //     var max = parseInt(price.split("-")[1]);
-       
-                            //     for (var i = 0; i < arr.length; i++) {
-                            //         var currentPrice = parseInt(arr[i].productPrice.slice(1));
-                            //         if (currentPrice <= max && currentPrice >= min) {
-                            //             selectedRes.result.push(arr[i]);
-                            //         }
-                            //    }
-                            // }
+                            }
                         };
+
+                        if(price){
+                            var arr = selectedRes.result;
+                            selectedRes.result = [];
+                            var min = parseInt(price.split("-")[0]);
+                            var max = parseInt(price.split("-")[1]);
+
+                            for (var i = 0; i < arr.length; i++) {
+                                var currentPrice = parseInt(arr[i].productPrice.slice(1));
+                                if (currentPrice <= max && currentPrice >= min) {
+                                    selectedRes.result.push(arr[i]);
+                                }
+                           }
+                        }
                     }
                      
                     //7.6 渲染模板
@@ -127,7 +129,7 @@ $(function(){
                     document.body.scrollTop = document.documentElement.scrollTop = 0;
 
                     //7.9 调用关闭侧栏的函数
-                   // $("#my-button").click();
+                    $("#my-button").click();
 
                 });
 
@@ -259,8 +261,18 @@ $(function(){
         API.close();
     });
 
-    // $("#menu .types").on("click","span",function(){
-    //     $(this).addClass("active").parent().siblings().find("span").removeClass("active");
-    // });
+    //8.侧栏的点击事件
+    $("#menu .titlePart").on("click",".fa",function(){
+        //8.1 点击箭头方向改变
+        $(this).toggleClass("fa fa-angle-down").toggleClass("fa fa-angle-up");
+        //8.2 隐藏起来
+        if($(this).hasClass("fa fa-angle-up")){
+            
+            $(this).parent().next(".types").find("a").addClass("hiddenDiv").find('span').css('display','none');
+    
+        }else {
+            $(this).parent().next(".types").find("a").removeClass("hiddenDiv").find('span').css('display','flex');
+        }
+    })
     
 })
