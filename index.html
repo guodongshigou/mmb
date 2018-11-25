@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./lib/jquery/jquery3.min.js"></script>
+    <script src="./lib/mui/dist/js/mui.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="javascript:void(0)" class="back">
+                <i class="mui-icon mui-icon-back"></i>
+            </a>
+            <span class="title">白菜价-淘宝内部券</span>
+            <a href="#" class="downloadApp">
+                <img src="./images/download.png" alt="">
+            </a>
+        </div>
+        <div class="main">
+            <!-- 首页主体滚动 -->
+            <!-- 用MUI框架实现区域滚动功能 -->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--  首页导航-->
+                    <div class="nav">
+                    </div>
+                    <!-- 商品详情 -->
+                    <div class="productDiscount">
+                        <div class="productNav">
+                            <span>超值折扣推荐</span>
+                            <img src="./images/more.png" alt="">
+                        </div>
+                        <!-- 商品详情 -->
+                        <ul class="productLists">
+
+                        </ul>
+                    </div>
+
+                    <!-- 更多跳转到省钱控 -->
+                    <div class="moreInfo">
+                        <a href="#">更多优惠信息</a>
+                    </div>
+
+                    <!-- 底部 -->
+                    <div class="footer">
+                        <div class="pager">
+
+                        </div>
+
+
+                        <div class="foot_top">
+                            <a href="#">登录</a>
+                            <a href="#">注册</a>
+                            <a href="#header" class="back">
+                                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15"> 返回顶部
+                            </a>
+                        </div>
+                        <div class="foot_bottom">
+                            <p>
+                                <a href="#">手机APP下载</a>
+                                <a href="index.html">慢慢买手机版</a>
+                                -- 掌上比价平台
+                            </p>
+                            <p>m.manmanbuy.com</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- 首页nav模板引擎 -->
+    <script id="getmenu" type="text/html">
+        {{ each list value i }}
+        <a href="{{ value.titlehref }}" class="{{ if i> 7 }}active{{/if}}">
+                {{#value.img }}
+                <span class="navName">{{ value.name }}</span>
+        </a>
+        {{ /each }}
+    </script>
+
+
+    <!-- 首页商品详情渲染 -->
+    <script id="getproductLists" type="text/html">
+        {{ each data v i }}
+        <li data-id="{{v.productId}}">
+            <a class="productImage">
+                {{#v.productImgSm }}
+            </a>
+
+            <div class="productInfo">
+                <a  class="productTop">
+                    <span class="productName">{{ v.productName }}</span>
+                    <span class="productPinkage">{{ v.productPinkage }}</span>
+                </a>
+
+                <div class="productBottom">
+                    <div class="whereFrom">
+                        <span class="productFrom">{{ v.productFrom }}</span>
+                        <span>|</span>
+                        <span class="productTime">{{ v.productTime }}</span>
+                    </div>
+                    <div class="comment">
+                            <i class="fa fa-commenting-o" aria-hidden="true"></i> 
+                        <span class="productComCount">{{ v.productComCount }}</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {{ /each}}
+    </script>
+
+
+    <!-- 分页模板 -->
+    <!-- <script id="pageTemplate" type="text/html">
+        <a class="pagePrevious">
+                上一页
+        </a>
+        <a class="dropBox">
+            <select name="" id="page">
+                {{each pageData v i }}
+                <option value="">
+                    <span class="pageNow">{{v}}</span>
+                    <span>/</span>
+                    <span class="pageNum">{{pageData.length}}</span>
+                </option>
+                {{ /each }}
+            </select>
+        </a>
+        <a class="pageNext">
+                下一页
+        </a>
+    </script> -->
+</body>
+
+</html>
