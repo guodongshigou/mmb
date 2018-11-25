@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="ruleForm">
+            <!--  Element 插件Form表单 -->
+            <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+                <!-- 表单1 -->
+                <el-form-item label="表单1信息" prop="username">
+                    <el-input v-model="ruleForm.username"></el-input>
+                </el-form-item>
+                <el-form-item label="表单1信息" prop="usern">
+                    <el-input v-model="ruleForm.usern"></el-input>
+                </el-form-item>
+                <el-form-item label="表单1信息" prop="user">
+                    <el-input v-model="ruleForm.user"></el-input>
+                </el-form-item>
+
+                <!-- 表单1的用户类型 -->
+                <el-form-item label="用户类型" prop="radio">
+                    <el-radio-group v-model="ruleForm.radio">
+                        <el-radio :label="1" @change="handle">用户1</el-radio>
+                        <el-radio :label="2" @change="handle">用户2</el-radio>
+                        <el-radio :label="3" @change="handle">用户3</el-radio>
+                        <el-radio :label="4" @change="handle">用户4</el-radio>
+                    </el-radio-group>
+                </el-form-item>
+
+
+                <div class="a" v-if="ruleForm.radio == 1">
+                    <!-- 用户1对应的表单2信息  -->
+                    <el-form :model="a" :rules="rules" ref="a" label-width="100px" class="demo-ruleForm">
+                        <el-form-item label="用户1信息" prop="dbIp">
+                            <el-input v-model="a.dbIp"></el-input>
+                        </el-form-item>
+                        <el-form-item label="用户1信息" prop="dbIp88">
+                            <el-input v-model="a.dbIp88"></el-input>
+                        </el-form-item>
+                        <el-form-item label="用户1信息" prop="dbIp2">
+                            <el-input v-model="a.dbIp2"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+                            <el-button @click="resetForm('ruleForm')">重置</el-button>
+                        </el-form-item>
+                    </el-form>
+                </div>
+
+                <div class="b" v-if="ruleForm.radio == 2" >
+                    <!-- 用户2对应的表单2信息  -->
+                    <el-form :model="b" :rules="rules" ref="b" label-width="100px" class="demo-ruleForm">
+                        <el-form-item label="用户2信息" prop="dbIp3">
+                            <el-input v-model="b.dbIp3"></el-input>
+                        </el-form-item>
+                        <el-form-item label="用户2信息" prop="dbIp4">
+                            <el-input v-model="b.dbIp4"></el-input>
+                        </el-form-item>
+                        <el-form-item label="用户2信息" prop="dbIp88">
+                            <el-input v-model="b.dbIp88"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+                            <el-button @click="resetForm('ruleForm')">重置</el-button>
+                        </el-form-item>
+                    </el-form>
+                </div>
+
+                <div class="c" v-if="ruleForm.radio == 3">
+                    <!-- 用户3对应的表单2信息  -->
+                    <el-form :model="c" :rules="rules" ref="c" label-width="100px" class="demo-ruleForm">
+                        <el-form-item label="用户3信息" prop="dbIp88">
+                            <el-input v-model="c.dbIp88"></el-input>
+                        </el-form-item>
+                        <el-form-item label="用户3信息" prop="dbIp7">
+                            <el-input v-model="c.dbIp7"></el-input>
+                        </el-form-item>
+                        <el-form-item label="用户3信息" prop="dbIp8">
+                            <el-input v-model="c.dbIp8"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+                            <el-button @click="resetForm('ruleForm')">重置</el-button>
+                        </el-form-item>
+                    </el-form>
+                </div>
+
+                <div class="d" v-if="ruleForm.radio == 4">
+                    <!-- 用户4对应的表单2信息 -->
+                    <el-form :model="d" :rules="rules" ref="d" label-width="100px" class="demo-ruleForm">
+                        <el-form-item label="用户4信息" prop="dbIp9">
+                            <el-input v-model="d.dbIp9"></el-input>
+                        </el-form-item>
+                        <el-form-item label="用户4信息" prop="dbIp10">
+                            <el-input v-model="d.dbIp10"></el-input>
+                        </el-form-item>
+                        <el-form-item label="用户4信息" prop="dbIp11">
+                            <el-input v-model="d.dbIp11"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+                            <el-button @click="resetForm('ruleForm')">重置</el-button>
+                        </el-form-item>
+                    </el-form>
+                </div>
+
+            </el-form>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var Main = {
+        data() {
+            return {
+                ruleForm: {
+                    username: '',
+                    usern: '',
+                    user: '',
+                    radio: ''
+                },
+                a: {
+                    dbIp: '',
+                    dbIp88: '',
+                    dbIp2: '',
+                },
+                b: {
+                    dbIp3: '',
+                    dbIp4: '',
+                    dbIp88: '',
+                },
+                c: {
+                    dbIp88: '',
+                    dbIp7: '',
+                    dbIp8: '',
+                },
+                d: {
+                    dbIp9: '',
+                    dbIp10: '',
+                    dbIp11: '',
+                },
+
+                rules: {
+                    username: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+                    usern: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+                    user: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+                    dbIp: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+                    dbIp1: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+                    dbIp2: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+                    dbIp3: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+                    dbIp4: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+                    dbIp5: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+                    dbIp6: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+                    dbIp7: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+                    dbIp8: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+                    dbIp9: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+                    dbIp10: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+                    dbIp11: [{
+                        required: true,
+                        message: '请输入活动名称',
+                        trigger: 'blur'
+                    },
+                    {
+                        min: 3,
+                        max: 5,
+                        message: '长度在 3 到 5 个字符',
+                        trigger: 'blur'
+                    }
+                    ],
+
+
+
+                }
+            };
+
+        },
+        methods: {
+            submitForm(formName) {
+
+                this.$refs[formName].validate(valid => {
+                    console.log(valid)
+                    if (valid) {
+                        console.log('成功');
+                        if (this.ruleForm.radio == '1') {
+                            this.a.dbIp = '';
+                            this.a.dbIp88 = '';
+                            this.a.dbIp2 = '';
+                            // for(let value of values(this.a)){
+                            //     console.log(this.a)
+                            // }
+                            // 
+
+                        }
+
+                        this.resetForm(formName);
+
+                    } else {
+                        console.log("失败");
+                        return false;
+                    }
+                });
+            },
+            resetForm(formName) {
+                this.$refs[formName].resetFields();
+            },
+
+
+            handle(id){
+                const obj = {1:this.a,2:this.b,3:this.c,4:this.d}
+                const arr = Object.keys(obj)
+                
+                const newArr = arr.filter(item=>{
+                    return item != id
+                })
+                
+                newArr.forEach(item=>{
+                    let index = obj[item]
+                    const keyArr = Object.keys(index)
+                    keyArr.forEach(item=>{
+                        index[item] = ''
+                    })
+
+                })
+            }
+
+        }
+
+    }
+
+
+    var Ctor = Vue.extend(Main)
+    new Ctor().$mount('#app')
+</script>
